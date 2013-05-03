@@ -1,0 +1,9 @@
+
+lcd /data/DIV5/SASC/002_cmf/input
+lpwd
+cd /Scratch/data/DIV5/SASC/002_cmf/input
+pwd
+put *.bz2
+ls
+quit
+

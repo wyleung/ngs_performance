@@ -1,0 +1,13 @@
+Job 5213922 (sara_ngs) Complete
+ User             = wyleung
+ Queue            = all.q@frilledshark.cluster.loc
+ Host             = frilledshark
+ Start Time       = 05/03/2013 11:38:43
+ End Time         = 05/03/2013 12:11:20
+ User Time        = 00:27:13
+ System Time      = 00:04:28
+ Wallclock Time   = 00:32:37
+ CPU              = 00:31:41
+ Max vmem         = 78.594M
+ Exit Status      = 0
+

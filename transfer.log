@@ -1,0 +1,74 @@
+sftp> 
+sftp> lcd /data/DIV5/SASC/002_cmf/input
+sftp> lpwd
+Local working directory: /data/DIV5/SASC/002_cmf/input
+sftp> cd /Scratch/data/DIV5/SASC/002_cmf/input
+sftp> pwd
+Remote working directory: /Scratch/data/DIV5/SASC/002_cmf/input
+sftp> put *.bz2
+Uploading 4_120524_BC0R4LACXX_P_217_1_3_index2_1.fastq.bz2 to /Scratch/data/DIV5/SASC/002_cmf/input/4_120524_BC0R4LACXX_P_217_1_3_index2_1.fastq.bz2
+Uploading 4_120524_BC0R4LACXX_P_217_1_3_index2_2.fastq.bz2 to /Scratch/data/DIV5/SASC/002_cmf/input/4_120524_BC0R4LACXX_P_217_1_3_index2_2.fastq.bz2
+Uploading 4_120524_BC0R4LACXX_P_217_2_3_index4_1.fastq.bz2 to /Scratch/data/DIV5/SASC/002_cmf/input/4_120524_BC0R4LACXX_P_217_2_3_index4_1.fastq.bz2
+Uploading 4_120524_BC0R4LACXX_P_217_2_3_index4_2.fastq.bz2 to /Scratch/data/DIV5/SASC/002_cmf/input/4_120524_BC0R4LACXX_P_217_2_3_index4_2.fastq.bz2
+Uploading 4_120524_BC0R4LACXX_P_217_3_3_index5_1.fastq.bz2 to /Scratch/data/DIV5/SASC/002_cmf/input/4_120524_BC0R4LACXX_P_217_3_3_index5_1.fastq.bz2
+Uploading 4_120524_BC0R4LACXX_P_217_3_3_index5_2.fastq.bz2 to /Scratch/data/DIV5/SASC/002_cmf/input/4_120524_BC0R4LACXX_P_217_3_3_index5_2.fastq.bz2
+Uploading 4_120524_BC0R4LACXX_P_217_4_3_index6_1.fastq.bz2 to /Scratch/data/DIV5/SASC/002_cmf/input/4_120524_BC0R4LACXX_P_217_4_3_index6_1.fastq.bz2
+Uploading 4_120524_BC0R4LACXX_P_217_4_3_index6_2.fastq.bz2 to /Scratch/data/DIV5/SASC/002_cmf/input/4_120524_BC0R4LACXX_P_217_4_3_index6_2.fastq.bz2
+Uploading 5_120524_BC0R4LACXX_P_217_1_3_index2_1.fastq.bz2 to /Scratch/data/DIV5/SASC/002_cmf/input/5_120524_BC0R4LACXX_P_217_1_3_index2_1.fastq.bz2
+Uploading 5_120524_BC0R4LACXX_P_217_1_3_index2_2.fastq.bz2 to /Scratch/data/DIV5/SASC/002_cmf/input/5_120524_BC0R4LACXX_P_217_1_3_index2_2.fastq.bz2
+Uploading 5_120524_BC0R4LACXX_P_217_2_3_index4_1.fastq.bz2 to /Scratch/data/DIV5/SASC/002_cmf/input/5_120524_BC0R4LACXX_P_217_2_3_index4_1.fastq.bz2
+Uploading 5_120524_BC0R4LACXX_P_217_2_3_index4_2.fastq.bz2 to /Scratch/data/DIV5/SASC/002_cmf/input/5_120524_BC0R4LACXX_P_217_2_3_index4_2.fastq.bz2
+Uploading 5_120524_BC0R4LACXX_P_217_3_3_index5_1.fastq.bz2 to /Scratch/data/DIV5/SASC/002_cmf/input/5_120524_BC0R4LACXX_P_217_3_3_index5_1.fastq.bz2
+Uploading 5_120524_BC0R4LACXX_P_217_3_3_index5_2.fastq.bz2 to /Scratch/data/DIV5/SASC/002_cmf/input/5_120524_BC0R4LACXX_P_217_3_3_index5_2.fastq.bz2
+Uploading 5_120524_BC0R4LACXX_P_217_4_3_index6_1.fastq.bz2 to /Scratch/data/DIV5/SASC/002_cmf/input/5_120524_BC0R4LACXX_P_217_4_3_index6_1.fastq.bz2
+Uploading 5_120524_BC0R4LACXX_P_217_4_3_index6_2.fastq.bz2 to /Scratch/data/DIV5/SASC/002_cmf/input/5_120524_BC0R4LACXX_P_217_4_3_index6_2.fastq.bz2
+Uploading 6_120524_BC0R4LACXX_P_217_1_3_index2_1.fastq.bz2 to /Scratch/data/DIV5/SASC/002_cmf/input/6_120524_BC0R4LACXX_P_217_1_3_index2_1.fastq.bz2
+Uploading 6_120524_BC0R4LACXX_P_217_1_3_index2_2.fastq.bz2 to /Scratch/data/DIV5/SASC/002_cmf/input/6_120524_BC0R4LACXX_P_217_1_3_index2_2.fastq.bz2
+Uploading 6_120524_BC0R4LACXX_P_217_2_3_index4_1.fastq.bz2 to /Scratch/data/DIV5/SASC/002_cmf/input/6_120524_BC0R4LACXX_P_217_2_3_index4_1.fastq.bz2
+Uploading 6_120524_BC0R4LACXX_P_217_2_3_index4_2.fastq.bz2 to /Scratch/data/DIV5/SASC/002_cmf/input/6_120524_BC0R4LACXX_P_217_2_3_index4_2.fastq.bz2
+Uploading 6_120524_BC0R4LACXX_P_217_3_3_index5_1.fastq.bz2 to /Scratch/data/DIV5/SASC/002_cmf/input/6_120524_BC0R4LACXX_P_217_3_3_index5_1.fastq.bz2
+Uploading 6_120524_BC0R4LACXX_P_217_3_3_index5_2.fastq.bz2 to /Scratch/data/DIV5/SASC/002_cmf/input/6_120524_BC0R4LACXX_P_217_3_3_index5_2.fastq.bz2
+Uploading 6_120524_BC0R4LACXX_P_217_4_3_index6_1.fastq.bz2 to /Scratch/data/DIV5/SASC/002_cmf/input/6_120524_BC0R4LACXX_P_217_4_3_index6_1.fastq.bz2
+Uploading 6_120524_BC0R4LACXX_P_217_4_3_index6_2.fastq.bz2 to /Scratch/data/DIV5/SASC/002_cmf/input/6_120524_BC0R4LACXX_P_217_4_3_index6_2.fastq.bz2
+Uploading 7_120524_BC0R4LACXX_P_217_1_3_index2_1.fastq.bz2 to /Scratch/data/DIV5/SASC/002_cmf/input/7_120524_BC0R4LACXX_P_217_1_3_index2_1.fastq.bz2
+Uploading 7_120524_BC0R4LACXX_P_217_1_3_index2_2.fastq.bz2 to /Scratch/data/DIV5/SASC/002_cmf/input/7_120524_BC0R4LACXX_P_217_1_3_index2_2.fastq.bz2
+Uploading 7_120524_BC0R4LACXX_P_217_2_3_index4_1.fastq.bz2 to /Scratch/data/DIV5/SASC/002_cmf/input/7_120524_BC0R4LACXX_P_217_2_3_index4_1.fastq.bz2
+Uploading 7_120524_BC0R4LACXX_P_217_2_3_index4_2.fastq.bz2 to /Scratch/data/DIV5/SASC/002_cmf/input/7_120524_BC0R4LACXX_P_217_2_3_index4_2.fastq.bz2
+Uploading 7_120524_BC0R4LACXX_P_217_3_3_index5_1.fastq.bz2 to /Scratch/data/DIV5/SASC/002_cmf/input/7_120524_BC0R4LACXX_P_217_3_3_index5_1.fastq.bz2
+Uploading 7_120524_BC0R4LACXX_P_217_3_3_index5_2.fastq.bz2 to /Scratch/data/DIV5/SASC/002_cmf/input/7_120524_BC0R4LACXX_P_217_3_3_index5_2.fastq.bz2
+Uploading 7_120524_BC0R4LACXX_P_217_4_3_index6_1.fastq.bz2 to /Scratch/data/DIV5/SASC/002_cmf/input/7_120524_BC0R4LACXX_P_217_4_3_index6_1.fastq.bz2
+Uploading 7_120524_BC0R4LACXX_P_217_4_3_index6_2.fastq.bz2 to /Scratch/data/DIV5/SASC/002_cmf/input/7_120524_BC0R4LACXX_P_217_4_3_index6_2.fastq.bz2
+sftp> ls
+4_120524_BC0R4LACXX_P_217_1_3_index2_1.fastq.bz2                                
+4_120524_BC0R4LACXX_P_217_1_3_index2_2.fastq.bz2                                
+4_120524_BC0R4LACXX_P_217_2_3_index4_1.fastq.bz2                                
+4_120524_BC0R4LACXX_P_217_2_3_index4_2.fastq.bz2                                
+4_120524_BC0R4LACXX_P_217_3_3_index5_1.fastq.bz2                                
+4_120524_BC0R4LACXX_P_217_3_3_index5_2.fastq.bz2                                
+4_120524_BC0R4LACXX_P_217_4_3_index6_1.fastq.bz2                                
+4_120524_BC0R4LACXX_P_217_4_3_index6_2.fastq.bz2                                
+5_120524_BC0R4LACXX_P_217_1_3_index2_1.fastq.bz2                                
+5_120524_BC0R4LACXX_P_217_1_3_index2_2.fastq.bz2                                
+5_120524_BC0R4LACXX_P_217_2_3_index4_1.fastq.bz2                                
+5_120524_BC0R4LACXX_P_217_2_3_index4_2.fastq.bz2                                
+5_120524_BC0R4LACXX_P_217_3_3_index5_1.fastq.bz2                                
+5_120524_BC0R4LACXX_P_217_3_3_index5_2.fastq.bz2                                
+5_120524_BC0R4LACXX_P_217_4_3_index6_1.fastq.bz2                                
+5_120524_BC0R4LACXX_P_217_4_3_index6_2.fastq.bz2                                
+6_120524_BC0R4LACXX_P_217_1_3_index2_1.fastq.bz2                                
+6_120524_BC0R4LACXX_P_217_1_3_index2_2.fastq.bz2                                
+6_120524_BC0R4LACXX_P_217_2_3_index4_1.fastq.bz2                                
+6_120524_BC0R4LACXX_P_217_2_3_index4_2.fastq.bz2                                
+6_120524_BC0R4LACXX_P_217_3_3_index5_1.fastq.bz2                                
+6_120524_BC0R4LACXX_P_217_3_3_index5_2.fastq.bz2                                
+6_120524_BC0R4LACXX_P_217_4_3_index6_1.fastq.bz2                                
+6_120524_BC0R4LACXX_P_217_4_3_index6_2.fastq.bz2                                
+7_120524_BC0R4LACXX_P_217_1_3_index2_1.fastq.bz2                                
+7_120524_BC0R4LACXX_P_217_1_3_index2_2.fastq.bz2                                
+7_120524_BC0R4LACXX_P_217_2_3_index4_1.fastq.bz2                                
+7_120524_BC0R4LACXX_P_217_2_3_index4_2.fastq.bz2                                
+7_120524_BC0R4LACXX_P_217_3_3_index5_1.fastq.bz2                                
+7_120524_BC0R4LACXX_P_217_3_3_index5_2.fastq.bz2                                
+7_120524_BC0R4LACXX_P_217_4_3_index6_1.fastq.bz2                                
+7_120524_BC0R4LACXX_P_217_4_3_index6_2.fastq.bz2                                
+sftp> quit
