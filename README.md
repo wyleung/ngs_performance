@@ -5,21 +5,21 @@ Introduction
 ------------
 
 This repo will hold all scripts and testresults generated for the Proof of 
-Concept: Scale-out solutions for HPC cluster SHARK to SurfSARA cloud.
+Concept: __Scale-out solutions for HPC cluster SHARK to SurfSARA cloud__.
 
 
 Project activities
 ------------------
 
-1. Notify SASC advisory group about project
-1. Acquire account for SARAHPC
-1. Let ICT Department modify firewall rules
+1. ~~Notify SASC advisory group about project~~ 18-03-2013
+1. ~~Acquire account for SARAHPC~~ 02-05-2013
+1. Let ICT Department modify firewall rules, allow SSH+SCP to virdir.cloud.sara.nl
 1. Let ICT Department/INFRA modify/check static routing to virdir.cloud.sara.nl
     To take advantage of the fiber/lightpath connection to SARA.
-1. Setup VM at SARA
-1. Setup /virdir at SARA, mimmic /data and /usr/local 
+1. ~~Setup VM at SARA~~ 03-05-2013
+1. ~~Setup /virdir at SARA, mimmic /data and /usr/local~~ 03-05-2013
     ( clone from shark with tools needed for this experiment )
-1. Transfer FastQ files for this experiment (105 GB, from ~scr project)
+1. ~~Transfer FastQ files for this experiment (105 GB, from ~scr project)~~ 03-05-2013
 1. Transfer pipeline to SARA VM
 1. Setup testing environment to wrap the pipeline
 1. Execute testing scripts
