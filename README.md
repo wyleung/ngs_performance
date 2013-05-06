@@ -13,12 +13,16 @@ Project activities
 
 1. ~~Notify SASC advisory group about project~~ 18-03-2013
 1. ~~Acquire account for SARAHPC~~ 02-05-2013
-1. Let ICT Department modify firewall rules, allow SSH+SCP to virdir.cloud.sara.nl
+1. ~~Let ICT Department modify firewall rules, allow SSH+SCP to virdir.cloud.sara.nl~~
+    * Bert signed "**Aanvraagformulier externe verbingen**" 06-05-2013
 1. Let ICT Department/INFRA modify/check static routing to virdir.cloud.sara.nl
-    To take advantage of the fiber/lightpath connection to SARA.
+    * To take advantage of the fiber/lightpath connection to SARA.
+    * 06-05-2013: ~~Sent e-mail to R.Hollenbeek (ICT) to add routes to:~~
+        * ~~145.100.56.18 (virdir)~~
+        * ~~145.100.58.x (VM range)~~
 1. ~~Setup VM at SARA~~ 03-05-2013
 1. ~~Setup /virdir at SARA, mimmic /data and /usr/local~~ 03-05-2013
-    ( clone from shark with tools needed for this experiment )
+    * ~~( clone from shark with tools needed for this experiment )~~
 1. ~~Transfer FastQ files for this experiment (105 GB, from ~scr project)~~ 03-05-2013
 1. Transfer pipeline to SARA VM
 1. Setup testing environment to wrap the pipeline
@@ -38,8 +42,8 @@ Project members
 * Rob Cornellise (LUMC ICT)
 * Jan Bot (SurfSARA)
 
-Associated groups shown interest in project
--------------------------------------------
+Associated groups shown interest in this project
+------------------------------------------------
 * LGTC
 * Human Genetics
 * LUMC ICT
@@ -59,3 +63,9 @@ Contact
 
 * LUMC:
     - Wai Yi Leung
+
+Acknowledgements (external people):
+----------------------------------
+* Jhon Masschelein (SurfSARA) for setting up the VM and tackling the wrong setup.
+
+
