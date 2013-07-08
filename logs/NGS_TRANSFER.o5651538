@@ -1,0 +1,7 @@
+Start time : Thu Jul 4 15:34:00 CEST 2013
+ssh: connect to host virdir.cloud.sara.nl port 22: Connection timed out
+Couldn't read packet: Connection reset by peer
+Command exited with non-zero status 255
+0.00user 0.00system 1:03.62elapsed 0%CPU (0avgtext+0avgdata 3360maxresident)k
+600inputs+8outputs (4major+267minor)pagefaults 0swaps
+End time : Thu Jul 4 15:35:03 CEST 2013

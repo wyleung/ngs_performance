@@ -1,0 +1,32 @@
+Start time : Fri Jul 5 15:29:44 CEST 2013
+Warning: Permanently added '145.100.57.69' (ECDSA) to the list of known hosts.
+sftp> 
+sftp> lcd /data/DIV5/SASC/003_scr/input
+sftp> lpwd
+Local working directory: /data/DIV5/SASC/003_scr/input
+sftp> cd /data/DIV5/SASC/003_scr/input
+sftp> pwd
+Remote working directory: /data/DIV5/SASC/003_scr/input
+sftp> put *.bz2
+Uploading 120916_I224_FCD1CFTACXX_L5_SZAXPI014614-129_1.clean.fq.bz2 to /data/DIV5/SASC/003_scr/input/120916_I224_FCD1CFTACXX_L5_SZAXPI014614-129_1.clean.fq.bz2
+Uploading 120916_I224_FCD1CFTACXX_L5_SZAXPI014614-129_2.clean.fq.bz2 to /data/DIV5/SASC/003_scr/input/120916_I224_FCD1CFTACXX_L5_SZAXPI014614-129_2.clean.fq.bz2
+Uploading 120919_I595_FCC15WDACXX_L1_SZAXPI014615-129_1.clean.fq.bz2 to /data/DIV5/SASC/003_scr/input/120919_I595_FCC15WDACXX_L1_SZAXPI014615-129_1.clean.fq.bz2
+Uploading 120919_I595_FCC15WDACXX_L1_SZAXPI014615-129_2.clean.fq.bz2 to /data/DIV5/SASC/003_scr/input/120919_I595_FCC15WDACXX_L1_SZAXPI014615-129_2.clean.fq.bz2
+Uploading 120920_I631_FCD1CR7ACXX_L5_SZAXPI014615-129_1.clean.fq.bz2 to /data/DIV5/SASC/003_scr/input/120920_I631_FCD1CR7ACXX_L5_SZAXPI014615-129_1.clean.fq.bz2
+Uploading 120920_I631_FCD1CR7ACXX_L5_SZAXPI014615-129_2.clean.fq.bz2 to /data/DIV5/SASC/003_scr/input/120920_I631_FCD1CR7ACXX_L5_SZAXPI014615-129_2.clean.fq.bz2
+Uploading 120928_I174_FCC1714ACXX_L5_SZAXPI014614-129_1.clean.fq.bz2 to /data/DIV5/SASC/003_scr/input/120928_I174_FCC1714ACXX_L5_SZAXPI014614-129_1.clean.fq.bz2
+Uploading 120928_I174_FCC1714ACXX_L5_SZAXPI014614-129_2.clean.fq.bz2 to /data/DIV5/SASC/003_scr/input/120928_I174_FCC1714ACXX_L5_SZAXPI014614-129_2.clean.fq.bz2
+Warning: Permanently added '145.100.57.69' (ECDSA) to the list of known hosts.
+sftp> ls
+120916_I224_FCD1CFTACXX_L5_SZAXPI014614-129_1.clean.fq.bz2                      
+120916_I224_FCD1CFTACXX_L5_SZAXPI014614-129_2.clean.fq.bz2                      
+120919_I595_FCC15WDACXX_L1_SZAXPI014615-129_1.clean.fq.bz2                      
+120919_I595_FCC15WDACXX_L1_SZAXPI014615-129_2.clean.fq.bz2                      
+120920_I631_FCD1CR7ACXX_L5_SZAXPI014615-129_1.clean.fq.bz2                      
+120920_I631_FCD1CR7ACXX_L5_SZAXPI014615-129_2.clean.fq.bz2                      
+120928_I174_FCC1714ACXX_L5_SZAXPI014614-129_1.clean.fq.bz2                      
+120928_I174_FCC1714ACXX_L5_SZAXPI014614-129_2.clean.fq.bz2                      
+sftp> quit
+1023.60user 188.57system 1:49:58elapsed 18%CPU (0avgtext+0avgdata 30016maxresident)k
+136932296inputs+88outputs (8major+2289minor)pagefaults 0swaps
+End time : Fri Jul 5 17:19:42 CEST 2013

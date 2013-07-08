@@ -1,0 +1,9 @@
+Start time : Fri Jul 5 15:26:18 CEST 2013
+Warning: Permanently added '145.100.57.69' (ECDSA) to the list of known hosts.
+sftp> 
+sftp> lcd /data/DIV5/SASC/003_cmf/input
+Couldn't change local directory to "/data/DIV5/SASC/003_cmf/input": No such file or directory
+Command exited with non-zero status 1
+0.00user 0.00system 0:00.43elapsed 1%CPU (0avgtext+0avgdata 11936maxresident)k
+1608inputs+16outputs (7major+1103minor)pagefaults 0swaps
+End time : Fri Jul 5 15:26:18 CEST 2013

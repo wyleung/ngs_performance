@@ -1,0 +1,8 @@
+Start time : Fri Jul 5 15:24:54 CEST 2013
+Warning: Permanently added '145.100.57.69' (ECDSA) to the list of known hosts.
+Permission denied (publickey,password).
+Couldn't read packet: Connection reset by peer
+Command exited with non-zero status 255
+0.00user 0.00system 0:00.52elapsed 0%CPU (0avgtext+0avgdata 3376maxresident)k
+600inputs+8outputs (4major+267minor)pagefaults 0swaps
+End time : Fri Jul 5 15:24:54 CEST 2013
