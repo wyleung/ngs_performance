@@ -24,7 +24,9 @@ Project activities
 1. ~~Setup /virdir at SARA, mimmic /data and /usr/local~~ 03-05-2013
     * ~~( clone from shark with tools needed for this experiment )~~
 1. ~~Transfer FastQ files for this experiment (105 GB, from ~scr project)~~ 03-05-2013
-1. Transfer pipeline to SARA VM
+1. ~~Meeting Rob, Sander and Maarten about LP setup, re-connect LP and re-arrange IPs 19-07-2013~~
+1. ~~Working setup in logs/interfaces logs/route.log~~
+1. ~~Transfer pipeline to SARA VM see logs/transfer-via-vm.log~~
 1. Setup testing environment to wrap the pipeline
 1. Execute testing scripts
 1. Transfer results back to cluster/LUMC local
@@ -64,8 +66,9 @@ Contact
 * LUMC:
     - Wai Yi Leung
 
-Acknowledgements (external people):
+Acknowledgements:
 ----------------------------------
 * Jhon Masschelein (SurfSARA) for setting up the VM and tackling the wrong setup.
-
+* Sander Boele (SURFSara)
+* Maarten Schats (LUMC ICT)
 

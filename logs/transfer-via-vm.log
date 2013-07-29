@@ -1,0 +1,24 @@
+sasc@unassigned-hostname:/data/DIV5/SASC/common$ vnstat -l
+Monitoring eth0...    (press CTRL-C to stop)
+
+    rx:     1.14 Mbit/s  2205 p/s          tx:    59.35 Mbit/s  5311 p/s^C
+
+
+ eth0  /  traffic statistics
+
+                           rx         |       tx
+--------------------------------------+------------------
+  bytes                   109.69 MiB  |        7.94 GiB
+--------------------------------------+------------------
+          max            3.81 Mbit/s  |   380.60 Mbit/s
+      average            1.75 Mbit/s  |   129.55 Mbit/s
+          min               0 kbit/s  |        0 kbit/s
+--------------------------------------+------------------
+  packets                    1725128  |         5870547
+--------------------------------------+------------------
+          max               7302 p/s  |       33560 p/s
+      average               3356 p/s  |       11421 p/s
+          min                  0 p/s  |           0 p/s
+--------------------------------------+------------------
+  time                  8.57 minutes
+

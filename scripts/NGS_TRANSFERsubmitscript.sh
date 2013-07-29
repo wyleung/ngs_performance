@@ -2,7 +2,7 @@
 #$ -S /bin/bash
 #$ -P sasc
 #$ -q all.q
-#$ -N NGS_TRANSFER
+#$ -N NGS_TXVM31
 #$ -cwd
 #$ -j Y
 #$ -V
