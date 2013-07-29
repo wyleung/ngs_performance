@@ -20,20 +20,23 @@ see log in [route.log](route.log)
 Network speed
 -------------
 
-In the new setup with the working Ligthpath, the speed is determined by the slowest factor:
-The virtual machine connected to the ``virdir``. We see a 100% load on 1 ``cpu core`` on the sftp process.
-The VM itself seems not to be the problem, drops in speed doesn't relate to lack of cpu power (we have 8 cores, 1 dedicated on the sftp process)
-We are still measuring the statistics, the slowdown factor can be explained by the fact that the ``virdir`` is a shared facility.
 
-see log in [transfer-via-vm.log](transfer-via-vm.log).
-
-In an alternate setup where we transfer directly from shark to the `[virdir]`(virdir.cloud.sara.nl), we see a constant/stable connection.
+In an initial where we transfer directly from shark to the [virdir](virdir.cloud.sara.nl) via the shared network infrastructure, we see a constant/stable connection.
 The dataset is 78514052 bytes large (75GB), time take for this transfer: 33:37 min (mm:ss).
 
 The average speed in this setup was 38926 B/s (38.01 MB/s)
 
 see log in [sara_ngs.o5213922](sara_ngs.o5213922)
 
+
+
+
+In the new setup with the working Ligthpath, the speed is determined by the slowest factor:
+The virtual machine connected to the ``virdir``. We see a 100% load on 1 ``cpu core`` on the sftp process.
+The VM itself seems not to be the problem, drops in speed doesn't relate to lack of cpu power (we have 8 cores, 1 dedicated on the sftp process)
+We are still measuring the statistics, the slowdown factor can be explained by the fact that the ``virdir`` is a shared facility.
+
+see log in [transfer-via-vm.log](transfer-via-vm.log).
 
 
 
