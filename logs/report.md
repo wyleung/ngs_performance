@@ -1,9 +1,6 @@
 Network setup report
 ====================
 
-Introduction
-------------
-
 This report shows the results from the LUMC-SARA Lightpath setup.
 
 The virtual machine running at SARA requires a setup with 3 network interfaces.
@@ -30,7 +27,7 @@ We are still measuring the statistics, the slowdown factor can be explained by t
 
 see log in [transfer-via-vm.log](transfer-via-vm.log).
 
-In an alternate setup where we transfer directly from shark to the [virdir.cloud.sara.nl](`virdir`), we see a constant/stable connection.
+In an alternate setup where we transfer directly from shark to the [`virdir`](virdir.cloud.sara.nl), we see a constant/stable connection.
 The dataset is 78514052 bytes large (75GB), time take for this transfer: 33:37 min (mm:ss).
 
 The average speed in this setup was 38926 B/s (38.01 MB/s)
