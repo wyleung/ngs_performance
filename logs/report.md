@@ -18,7 +18,7 @@ eth1 is the public interface (to internet), no additional configuration needed.
 eth2 is the second internal network interface which is used for the 
 lightpath connection (needs static IP configuration)
 
-For the complete setup in /etc/network/interfaces see the file [interfaces].
+For the complete setup in /etc/network/interfaces see the file [interfaces](interfaces).
 
 
 
