@@ -1,0 +1,5 @@
+Host virdir
+    HostName 145.88.22.31
+    IdentityFile ~/.ssh/id_dsa
+    LocalForward 10022 10.0.103.4:22
+    User sasc

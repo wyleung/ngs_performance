@@ -1,0 +1,49 @@
+root@unassigned-hostname:/data/DIV5/SASC/003_scr/input# vnstat -i eth2 -l
+Monitoring eth2...    (press CTRL-C to stop)
+
+   rx:   114.37 Mbit/s  9727 p/s          tx:     2.98 Mbit/s  5273 p/s^C
+
+
+ eth2  /  traffic statistics
+
+                           rx         |       tx
+--------------------------------------+------------------
+  bytes                   415.36 MiB  |       10.83 MiB
+--------------------------------------+------------------
+          max          132.64 Mbit/s  |     3.44 Mbit/s
+      average          117.33 Mbit/s  |     3.06 Mbit/s
+          min          106.42 Mbit/s  |     2.77 Mbit/s
+--------------------------------------+------------------
+  packets                     289709  |          156758
+--------------------------------------+------------------
+          max              11306 p/s  |        6082 p/s
+      average               9989 p/s  |        5405 p/s
+          min               9066 p/s  |        4904 p/s
+--------------------------------------+------------------
+  time                    29 seconds
+
+root@unassigned-hostname:/data/DIV5/SASC/003_scr/input# vnstat -i eth0 -l
+Monitoring eth0...    (press CTRL-C to stop)
+
+   rx:     2.16 Mbit/s  3670 p/s          tx:   118.22 Mbit/s 10068 p/s^C
+
+
+ eth0  /  traffic statistics
+
+                           rx         |       tx
+--------------------------------------+------------------
+  bytes                    51.92 MiB  |        2.07 GiB
+--------------------------------------+------------------
+          max            3.49 Mbit/s  |   180.98 Mbit/s
+      average            3.08 Mbit/s  |   125.63 Mbit/s
+          min            2.16 Mbit/s  |   101.78 Mbit/s
+--------------------------------------+------------------
+  packets                     747693  |         1476668
+--------------------------------------+------------------
+          max               6179 p/s  |       15413 p/s
+      average               5418 p/s  |       10700 p/s
+          min               3670 p/s  |        8675 p/s
+--------------------------------------+------------------
+  time                  2.30 minutes
+
+

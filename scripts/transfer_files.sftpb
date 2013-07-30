@@ -1,7 +1,7 @@
 
 lcd /data/DIV5/SASC/003_scr/input
 lpwd
-cd /data/DIV5/SASC/003_scr/input
+cd /Scratch/data/DIV5/SASC/003_scr/input
 pwd
 put *.bz2
 ls
