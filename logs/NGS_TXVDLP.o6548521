@@ -1,0 +1,32 @@
+Start time : Thu Aug 22 13:35:53 CEST 2013
+Warning: Permanently added 'virdir.cloud.sara.nl,145.100.56.18' (RSA) to the list of known hosts.
+sftp> 
+sftp> lcd /data/DIV5/SASC/003_scr/input
+sftp> lpwd
+Local working directory: /data/DIV5/SASC/003_scr/input
+sftp> cd /Scratch/data/DIV5/SASC/003_scr/input
+sftp> pwd
+Remote working directory: /Scratch/data/DIV5/SASC/003_scr/input
+sftp> put *.bz2
+Uploading 120916_I224_FCD1CFTACXX_L5_SZAXPI014614-129_1.clean.fq.bz2 to /Scratch/data/DIV5/SASC/003_scr/input/120916_I224_FCD1CFTACXX_L5_SZAXPI014614-129_1.clean.fq.bz2
+Uploading 120916_I224_FCD1CFTACXX_L5_SZAXPI014614-129_2.clean.fq.bz2 to /Scratch/data/DIV5/SASC/003_scr/input/120916_I224_FCD1CFTACXX_L5_SZAXPI014614-129_2.clean.fq.bz2
+Uploading 120919_I595_FCC15WDACXX_L1_SZAXPI014615-129_1.clean.fq.bz2 to /Scratch/data/DIV5/SASC/003_scr/input/120919_I595_FCC15WDACXX_L1_SZAXPI014615-129_1.clean.fq.bz2
+Uploading 120919_I595_FCC15WDACXX_L1_SZAXPI014615-129_2.clean.fq.bz2 to /Scratch/data/DIV5/SASC/003_scr/input/120919_I595_FCC15WDACXX_L1_SZAXPI014615-129_2.clean.fq.bz2
+Uploading 120920_I631_FCD1CR7ACXX_L5_SZAXPI014615-129_1.clean.fq.bz2 to /Scratch/data/DIV5/SASC/003_scr/input/120920_I631_FCD1CR7ACXX_L5_SZAXPI014615-129_1.clean.fq.bz2
+Uploading 120920_I631_FCD1CR7ACXX_L5_SZAXPI014615-129_2.clean.fq.bz2 to /Scratch/data/DIV5/SASC/003_scr/input/120920_I631_FCD1CR7ACXX_L5_SZAXPI014615-129_2.clean.fq.bz2
+Uploading 120928_I174_FCC1714ACXX_L5_SZAXPI014614-129_1.clean.fq.bz2 to /Scratch/data/DIV5/SASC/003_scr/input/120928_I174_FCC1714ACXX_L5_SZAXPI014614-129_1.clean.fq.bz2
+Uploading 120928_I174_FCC1714ACXX_L5_SZAXPI014614-129_2.clean.fq.bz2 to /Scratch/data/DIV5/SASC/003_scr/input/120928_I174_FCC1714ACXX_L5_SZAXPI014614-129_2.clean.fq.bz2
+Warning: Permanently added 'virdir.cloud.sara.nl,145.100.56.18' (RSA) to the list of known hosts.
+sftp> ls
+120916_I224_FCD1CFTACXX_L5_SZAXPI014614-129_1.clean.fq.bz2                      
+120916_I224_FCD1CFTACXX_L5_SZAXPI014614-129_2.clean.fq.bz2                      
+120919_I595_FCC15WDACXX_L1_SZAXPI014615-129_1.clean.fq.bz2                      
+120919_I595_FCC15WDACXX_L1_SZAXPI014615-129_2.clean.fq.bz2                      
+120920_I631_FCD1CR7ACXX_L5_SZAXPI014615-129_1.clean.fq.bz2                      
+120920_I631_FCD1CR7ACXX_L5_SZAXPI014615-129_2.clean.fq.bz2                      
+120928_I174_FCC1714ACXX_L5_SZAXPI014614-129_1.clean.fq.bz2                      
+120928_I174_FCC1714ACXX_L5_SZAXPI014614-129_2.clean.fq.bz2                      
+sftp> quit
+988.02user 128.56system 33:18.10elapsed 55%CPU (0avgtext+0avgdata 23232maxresident)k
+136937632inputs+88outputs (70major+2276minor)pagefaults 0swaps
+End time : Thu Aug 22 14:09:11 CEST 2013
