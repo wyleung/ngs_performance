@@ -1,0 +1,7 @@
+[Thu Sep 12 12:00:04 2013 /usr/local/breakdancer/breakdancer_deploy_1.3.5/lib/breakdancer-max-unstable/bam2cfg.pl] Processing bam: 120916.sort.bam
+[Thu Sep 12 12:00:13 2013 /usr/local/breakdancer/breakdancer_deploy_1.3.5/lib/breakdancer-max-unstable/bam2cfg.pl] selected_libs is : 1
+[Thu Sep 12 12:00:13 2013 /usr/local/breakdancer/breakdancer_deploy_1.3.5/lib/breakdancer-max-unstable/bam2cfg.pl] Closing BAM file
+[Thu Sep 12 12:00:13 2013 /usr/local/breakdancer/breakdancer_deploy_1.3.5/lib/breakdancer-max-unstable/bam2cfg.pl] Send TERM signal for 13892
+[Thu Sep 12 12:00:15 2013 /usr/local/breakdancer/breakdancer_deploy_1.3.5/lib/breakdancer-max-unstable/bam2cfg.pl] samtools pid process 13892 is still there...
+[Thu Sep 12 12:00:15 2013 /usr/local/breakdancer/breakdancer_deploy_1.3.5/lib/breakdancer-max-unstable/bam2cfg.pl] invoking kill -9 on 13892 ...
+[Thu Sep 12 12:00:15 2013 /usr/local/breakdancer/breakdancer_deploy_1.3.5/lib/breakdancer-max-unstable/bam2cfg.pl] Closing samtools process : 13892

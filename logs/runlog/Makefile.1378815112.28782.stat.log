@@ -1,0 +1,23 @@
+	Command being timed: "sh -c /usr/local/samtools/samtools-0.1.18/samtools sort 120916.bam 120916.sort"
+	User time (seconds): 7874.09
+	System time (seconds): 173.33
+	Percent of CPU this job got: 73%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:01:55
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 6755216
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 3
+	Minor (reclaiming a frame) page faults: 512139
+	Voluntary context switches: 104091
+	Involuntary context switches: 76341
+	Swaps: 0
+	File system inputs: 85996112
+	File system outputs: 104796496
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

@@ -1,0 +1,1080 @@
+.1378714741.24364: ls *_1.clean.fq.bz2 | python -c 'import os; import sys; print os.path.commonprefix(list(sys.stdin)).split("_")[0]'
+.1378714741.1454: ls *_1.clean.fq.bz2 | sed 's/_1.clean.fq.bz2//'
+.1378714741.31655: ls *_1.clean.fq.bz2 *_2.clean.fq.bz2
+DEBUG .1378714741.31655: ls *_1.clean.fq.bz2 *_2.clean.fq.bz2
+Makefile.1378714741.27701: /usr/local/bwa/bwa-0.5.9/bwa aln -t 8 -q 10 -i 15 -I /usr/local/Genomes/H.Sapiens/hg19_sorted/bwa-0.5.9/reference.fa 120916_I224_FCD1CFTACXX_L5_SZAXPI014614-129_1.clean.fq > 120916_I224_FCD1CFTACXX_L5_SZAXPI014614-129_1.clean.sai
+DEBUG Makefile.1378714741.27701: /usr/local/bwa/bwa-0.5.9/bwa aln -t 8 -q 10 -i 15 -I /usr/local/Genomes/H.Sapiens/hg19_sorted/bwa-0.5.9/reference.fa 120916_I224_FCD1CFTACXX_L5_SZAXPI014614-129_1.clean.fq > 120916_I224_FCD1CFTACXX_L5_SZAXPI014614-129_1.clean.sai
+Makefile.1378724854.32323: /usr/local/bwa/bwa-0.5.9/bwa aln -t 8 -q 10 -i 15 -I /usr/local/Genomes/H.Sapiens/hg19_sorted/bwa-0.5.9/reference.fa 120916_I224_FCD1CFTACXX_L5_SZAXPI014614-129_2.clean.fq > 120916_I224_FCD1CFTACXX_L5_SZAXPI014614-129_2.clean.sai
+DEBUG Makefile.1378724854.32323: /usr/local/bwa/bwa-0.5.9/bwa aln -t 8 -q 10 -i 15 -I /usr/local/Genomes/H.Sapiens/hg19_sorted/bwa-0.5.9/reference.fa 120916_I224_FCD1CFTACXX_L5_SZAXPI014614-129_2.clean.fq > 120916_I224_FCD1CFTACXX_L5_SZAXPI014614-129_2.clean.sai
+Makefile.1378734844.26316: /usr/local/bwa/bwa-0.5.9/bwa sampe -a 500 -n 10 /usr/local/Genomes/H.Sapiens/hg19_sorted/bwa-0.5.9/reference.fa 120916_I224_FCD1CFTACXX_L5_SZAXPI014614-129_1.clean.sai 120916_I224_FCD1CFTACXX_L5_SZAXPI014614-129_2.clean.sai 120916_I224_FCD1CFTACXX_L5_SZAXPI014614-129_1.clean.fq 120916_I224_FCD1CFTACXX_L5_SZAXPI014614-129_2.clean.fq > 120916_I224_FCD1CFTACXX_L5_SZAXPI014614-129.sam
+DEBUG Makefile.1378734844.26316: /usr/local/bwa/bwa-0.5.9/bwa sampe -a 500 -n 10 /usr/local/Genomes/H.Sapiens/hg19_sorted/bwa-0.5.9/reference.fa 120916_I224_FCD1CFTACXX_L5_SZAXPI014614-129_1.clean.sai 120916_I224_FCD1CFTACXX_L5_SZAXPI014614-129_2.clean.sai 120916_I224_FCD1CFTACXX_L5_SZAXPI014614-129_1.clean.fq 120916_I224_FCD1CFTACXX_L5_SZAXPI014614-129_2.clean.fq > 120916_I224_FCD1CFTACXX_L5_SZAXPI014614-129.sam
+Makefile.1378760681.11038: /usr/local/samtools/samtools-0.1.18/samtools view -bST /usr/local/Genomes/H.Sapiens/hg19_sorted/reference.fa -o 120916_I224_FCD1CFTACXX_L5_SZAXPI014614-129.bam 120916_I224_FCD1CFTACXX_L5_SZAXPI014614-129.sam
+DEBUG Makefile.1378760681.11038: /usr/local/samtools/samtools-0.1.18/samtools view -bST /usr/local/Genomes/H.Sapiens/hg19_sorted/reference.fa -o 120916_I224_FCD1CFTACXX_L5_SZAXPI014614-129.bam 120916_I224_FCD1CFTACXX_L5_SZAXPI014614-129.sam
+Makefile.1378768786.11208: java -jar /usr/local/picard-tools/picard-tools-1.84/MergeSamFiles.jar OUTPUT=120916.bam VALIDATION_STRINGENCY=LENIENT USE_THREADING=True INPUT=120916_I224_FCD1CFTACXX_L5_SZAXPI014614-129.bam
+DEBUG Makefile.1378768786.11208: java -jar /usr/local/picard-tools/picard-tools-1.84/MergeSamFiles.jar OUTPUT=120916.bam VALIDATION_STRINGENCY=LENIENT USE_THREADING=True INPUT=120916_I224_FCD1CFTACXX_L5_SZAXPI014614-129.bam
+.1378815112.30736: ls *_1.clean.fq.bz2 | python -c 'import os; import sys; print os.path.commonprefix(list(sys.stdin)).split("_")[0]'
+.1378815112.16138: ls *_1.clean.fq.bz2 | sed 's/_1.clean.fq.bz2//'
+.1378815112.24064: ls *_1.clean.fq.bz2 *_2.clean.fq.bz2
+DEBUG .1378815112.24064: ls *_1.clean.fq.bz2 *_2.clean.fq.bz2
+Makefile.1378815112.28782: /usr/local/samtools/samtools-0.1.18/samtools sort 120916.bam 120916.sort
+DEBUG Makefile.1378815112.28782: /usr/local/samtools/samtools-0.1.18/samtools sort 120916.bam 120916.sort
+Makefile.1378826028.16286: /usr/local/samtools/samtools-0.1.18/samtools index 120916.sort.bam
+DEBUG Makefile.1378826028.16286: /usr/local/samtools/samtools-0.1.18/samtools index 120916.sort.bam
+Makefile.1378826540.14094: (SGE_RREQ="-now no -pe BWA 2" /usr/local/samtools/samtools-0.1.18/samtools view -bh -q 1 120916.sort.bam | /usr/local/bin/bamToBed | awk 'BEGIN { OFS="\t" } {if ($2==0) $2=1;} {$3=$2; print $0}' | /usr/local/bin/bedtools coverage -b /data/DIV5/SASC/common/bedtools/reference/hg19_5k.bins.bed -a /dev/stdin -counts | awk 'BEGIN {OFS="\t"} {sub(/chr/, "hs", $1); print $0}' > 120916.coverage.bed )
+Makefile.1378831060.24211: perl /usr/local/breakdancer/breakdancer_deploy_1.3.5/lib/breakdancer-max-unstable/bam2cfg.pl 120916.sort.bam > 120916.break.cfg
+DEBUG Makefile.1378831060.24211: perl /usr/local/breakdancer/breakdancer_deploy_1.3.5/lib/breakdancer-max-unstable/bam2cfg.pl 120916.sort.bam > 120916.break.cfg
+.1378979585.32022: ls *_1.clean.fq.bz2 | python -c 'import os; import sys; print os.path.commonprefix(list(sys.stdin)).split("_")[0]'
+.1378979586.9117: ls *_1.clean.fq.bz2 | sed 's/_1.clean.fq.bz2//'
+.1378979586.19149: ls *_1.clean.fq.bz2 *_2.clean.fq.bz2
+DEBUG .1378979586.19149: ls *_1.clean.fq.bz2 *_2.clean.fq.bz2
+Makefile.1378979586.10690: perl /usr/local/breakdancer/breakdancer_deploy_1.3.5/lib/breakdancer-max-unstable/bam2cfg.pl 120916.sort.bam > 120916.break.cfg
+DEBUG Makefile.1378979586.10690: perl /usr/local/breakdancer/breakdancer_deploy_1.3.5/lib/breakdancer-max-unstable/bam2cfg.pl 120916.sort.bam > 120916.break.cfg
+.1378979607.27989: ls *_1.clean.fq.bz2 | python -c 'import os; import sys; print os.path.commonprefix(list(sys.stdin)).split("_")[0]'
+.1378979607.27421: ls *_1.clean.fq.bz2 | sed 's/_1.clean.fq.bz2//'
+.1378979607.28478: ls *_1.clean.fq.bz2 *_2.clean.fq.bz2
+DEBUG .1378979607.28478: ls *_1.clean.fq.bz2 *_2.clean.fq.bz2
+Makefile.1378979607.20120: (PINDEL_INSERTSIZE=`sed -e 's/\t/\n/g' 120916.break.cfg | grep mean | cut -f 2 -d ':'`;echo -e '120916.sort.bam\t'$PINDEL_INSERTSIZE'\t120916.sort.bam' > 120916.pindel.cfg)
+Makefile.1378979607.5405: /usr/local/breakdancer/breakdancer_deploy_1.3.5/bin/breakdancer-max 120916.break.cfg > 120916.ctx
+DEBUG Makefile.1378979607.5405: /usr/local/breakdancer/breakdancer_deploy_1.3.5/bin/breakdancer-max 120916.break.cfg > 120916.ctx
+Makefile.1378979607.14935: /data/DIV5/SASC/common/programs/pindel/trunk/pindel -f /usr/local/Genomes/H.Sapiens/hg19_sorted/reference.fa -i 120916.pindel.cfg -o 120916.pindel -I -T 8 -b 120916.ctx && touch 120916.pindel
+DEBUG Makefile.1378979607.14935: /data/DIV5/SASC/common/programs/pindel/trunk/pindel -f /usr/local/Genomes/H.Sapiens/hg19_sorted/reference.fa -i 120916.pindel.cfg -o 120916.pindel -I -T 8 -b 120916.ctx && touch 120916.pindel
+.1378979627.11817: ls *_1.clean.fq.bz2 | python -c 'import os; import sys; print os.path.commonprefix(list(sys.stdin)).split("_")[0]'
+.1378979627.29669: ls *_1.clean.fq.bz2 | sed 's/_1.clean.fq.bz2//'
+.1378979627.27425: ls *_1.clean.fq.bz2 *_2.clean.fq.bz2
+DEBUG .1378979627.27425: ls *_1.clean.fq.bz2 *_2.clean.fq.bz2
+Makefile.1378979627.15653: perl /usr/local/breakdancer/breakdancer_deploy_1.3.5/lib/breakdancer-max-unstable/bam2cfg.pl 120916.sort.bam > 120916.break.cfg
+DEBUG Makefile.1378979627.15653: perl /usr/local/breakdancer/breakdancer_deploy_1.3.5/lib/breakdancer-max-unstable/bam2cfg.pl 120916.sort.bam > 120916.break.cfg
+.1378980004.2663: ls *_1.clean.fq.bz2 | python -c 'import os; import sys; print os.path.commonprefix(list(sys.stdin)).split("_")[0]'
+.1378980004.31907: ls *_1.clean.fq.bz2 | sed 's/_1.clean.fq.bz2//'
+.1378980004.14205: ls *_1.clean.fq.bz2 *_2.clean.fq.bz2
+DEBUG .1378980004.14205: ls *_1.clean.fq.bz2 *_2.clean.fq.bz2
+Makefile.1378980004.21294: perl /usr/local/breakdancer/breakdancer_deploy_1.3.5/lib/breakdancer-max-unstable/bam2cfg.pl 120916.sort.bam > 120916.break.cfg
+DEBUG Makefile.1378980004.21294: perl /usr/local/breakdancer/breakdancer_deploy_1.3.5/lib/breakdancer-max-unstable/bam2cfg.pl 120916.sort.bam > 120916.break.cfg
+Makefile.1378980016.24172: (PINDEL_INSERTSIZE=`sed -e 's/\t/\n/g' 120916.break.cfg | grep mean | cut -f 2 -d ':'`;echo -e '120916.sort.bam\t'$PINDEL_INSERTSIZE'\t120916.sort.bam' > 120916.pindel.cfg)
+Makefile.1378980016.1412: /usr/local/breakdancer/breakdancer_deploy_1.3.5/bin/breakdancer-max 120916.break.cfg > 120916.ctx
+DEBUG Makefile.1378980016.1412: /usr/local/breakdancer/breakdancer_deploy_1.3.5/bin/breakdancer-max 120916.break.cfg > 120916.ctx
+Makefile.1378983827.20653: /data/DIV5/SASC/common/programs/pindel/trunk/pindel -f /usr/local/Genomes/H.Sapiens/hg19_sorted/reference.fa -i 120916.pindel.cfg -o 120916.pindel -I -T 8 -b 120916.ctx && touch 120916.pindel
+DEBUG Makefile.1378983827.20653: /data/DIV5/SASC/common/programs/pindel/trunk/pindel -f /usr/local/Genomes/H.Sapiens/hg19_sorted/reference.fa -i 120916.pindel.cfg -o 120916.pindel -I -T 8 -b 120916.ctx && touch 120916.pindel
+Makefile.1379007337.28132: bash /data/DIV5/SASC/003_scr/scripts/sv2circos.sh -s 120916
+DEBUG Makefile.1379007337.28132: bash /data/DIV5/SASC/003_scr/scripts/sv2circos.sh -s 120916
+Makefile.1379007359.22382: mkdir -p 120916_I224_FCD1CFTACXX_L5_SZAXPI014614-129.fastqc && (SGE_RREQ="-now no -pe BWA 8" /usr/local/FastQC/FastQC_v0.9.3/fastqc -q -t 8 -o 120916_I224_FCD1CFTACXX_L5_SZAXPI014614-129.fastqc 120916_I224_FCD1CFTACXX_L5_SZAXPI014614-129_1.clean.fq 120916_I224_FCD1CFTACXX_L5_SZAXPI014614-129_2.clean.fq || (rm -Rf 120916_I224_FCD1CFTACXX_L5_SZAXPI014614-129.fastqc && false))
+Makefile.1379011603.10969: /usr/local/samtools/samtools-0.1.18/samtools flagstat 120916.sort.bam > 120916.flagstat
+DEBUG Makefile.1379011603.10969: /usr/local/samtools/samtools-0.1.18/samtools flagstat 120916.sort.bam > 120916.flagstat
+Makefile.1379012048.3902: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr1 -d 120916 -c 1 -s 120916 -l 120916.inr.bed
+DEBUG Makefile.1379012048.3902: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr1 -d 120916 -c 1 -s 120916 -l 120916.inr.bed
+Makefile.1379012052.13502: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr2 -d 120916 -c 2 -s 120916 -l 120916.inr.bed
+DEBUG Makefile.1379012052.13502: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr2 -d 120916 -c 2 -s 120916 -l 120916.inr.bed
+Makefile.1379012055.23457: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr3 -d 120916 -c 3 -s 120916 -l 120916.inr.bed
+DEBUG Makefile.1379012055.23457: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr3 -d 120916 -c 3 -s 120916 -l 120916.inr.bed
+Makefile.1379012057.55: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr4 -d 120916 -c 4 -s 120916 -l 120916.inr.bed
+DEBUG Makefile.1379012057.55: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr4 -d 120916 -c 4 -s 120916 -l 120916.inr.bed
+Makefile.1379012060.16444: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr5 -d 120916 -c 5 -s 120916 -l 120916.inr.bed
+DEBUG Makefile.1379012060.16444: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr5 -d 120916 -c 5 -s 120916 -l 120916.inr.bed
+Makefile.1379012062.28939: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr6 -d 120916 -c 6 -s 120916 -l 120916.inr.bed
+DEBUG Makefile.1379012062.28939: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr6 -d 120916 -c 6 -s 120916 -l 120916.inr.bed
+Makefile.1379012065.30994: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr7 -d 120916 -c 7 -s 120916 -l 120916.inr.bed
+DEBUG Makefile.1379012065.30994: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr7 -d 120916 -c 7 -s 120916 -l 120916.inr.bed
+Makefile.1379012067.7337: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr8 -d 120916 -c 8 -s 120916 -l 120916.inr.bed
+DEBUG Makefile.1379012067.7337: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr8 -d 120916 -c 8 -s 120916 -l 120916.inr.bed
+Makefile.1379012070.25817: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr9 -d 120916 -c 9 -s 120916 -l 120916.inr.bed
+DEBUG Makefile.1379012070.25817: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr9 -d 120916 -c 9 -s 120916 -l 120916.inr.bed
+Makefile.1379012072.10663: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr10 -d 120916 -c 10 -s 120916 -l 120916.inr.bed
+DEBUG Makefile.1379012072.10663: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr10 -d 120916 -c 10 -s 120916 -l 120916.inr.bed
+Makefile.1379012074.29682: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr11 -d 120916 -c 11 -s 120916 -l 120916.inr.bed
+DEBUG Makefile.1379012074.29682: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr11 -d 120916 -c 11 -s 120916 -l 120916.inr.bed
+Makefile.1379012077.29731: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr12 -d 120916 -c 12 -s 120916 -l 120916.inr.bed
+DEBUG Makefile.1379012077.29731: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr12 -d 120916 -c 12 -s 120916 -l 120916.inr.bed
+Makefile.1379012079.10334: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr13 -d 120916 -c 13 -s 120916 -l 120916.inr.bed
+DEBUG Makefile.1379012079.10334: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr13 -d 120916 -c 13 -s 120916 -l 120916.inr.bed
+Makefile.1379012081.13823: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr14 -d 120916 -c 14 -s 120916 -l 120916.inr.bed
+DEBUG Makefile.1379012081.13823: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr14 -d 120916 -c 14 -s 120916 -l 120916.inr.bed
+Makefile.1379012084.5674: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr15 -d 120916 -c 15 -s 120916 -l 120916.inr.bed
+DEBUG Makefile.1379012084.5674: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr15 -d 120916 -c 15 -s 120916 -l 120916.inr.bed
+Makefile.1379012086.12241: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr16 -d 120916 -c 16 -s 120916 -l 120916.inr.bed
+DEBUG Makefile.1379012086.12241: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr16 -d 120916 -c 16 -s 120916 -l 120916.inr.bed
+Makefile.1379012088.15455: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr17 -d 120916 -c 17 -s 120916 -l 120916.inr.bed
+DEBUG Makefile.1379012088.15455: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr17 -d 120916 -c 17 -s 120916 -l 120916.inr.bed
+Makefile.1379012090.14952: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr18 -d 120916 -c 18 -s 120916 -l 120916.inr.bed
+DEBUG Makefile.1379012090.14952: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr18 -d 120916 -c 18 -s 120916 -l 120916.inr.bed
+Makefile.1379012092.25392: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr19 -d 120916 -c 19 -s 120916 -l 120916.inr.bed
+DEBUG Makefile.1379012092.25392: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr19 -d 120916 -c 19 -s 120916 -l 120916.inr.bed
+Makefile.1379012095.23227: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr20 -d 120916 -c 20 -s 120916 -l 120916.inr.bed
+DEBUG Makefile.1379012095.23227: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr20 -d 120916 -c 20 -s 120916 -l 120916.inr.bed
+Makefile.1379012098.11035: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr21 -d 120916 -c 21 -s 120916 -l 120916.inr.bed
+DEBUG Makefile.1379012098.11035: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr21 -d 120916 -c 21 -s 120916 -l 120916.inr.bed
+Makefile.1379012100.19729: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr22 -d 120916 -c 22 -s 120916 -l 120916.inr.bed
+DEBUG Makefile.1379012100.19729: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr22 -d 120916 -c 22 -s 120916 -l 120916.inr.bed
+Makefile.1379012102.19250: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chrX -d 120916 -c X -s 120916 -l 120916.inr.bed
+DEBUG Makefile.1379012102.19250: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chrX -d 120916 -c X -s 120916 -l 120916.inr.bed
+Makefile.1379012103.17568: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chrY -d 120916 -c Y -s 120916 -l 120916.inr.bed
+DEBUG Makefile.1379012103.17568: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chrY -d 120916 -c Y -s 120916 -l 120916.inr.bed
+Makefile.1379012105.6144: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.all -d 120916 -c all -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012105.6144: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.all -d 120916 -c all -s 120916 -l 120916.int.bed
+Makefile.1379012108.23437: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr1-1.pairwise -d 120916 -c 1 -x 1 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012108.23437: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr1-1.pairwise -d 120916 -c 1 -x 1 -s 120916 -l 120916.int.bed
+Makefile.1379012111.875: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr1-2.pairwise -d 120916 -c 1 -x 2 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012111.875: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr1-2.pairwise -d 120916 -c 1 -x 2 -s 120916 -l 120916.int.bed
+Makefile.1379012112.3482: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr1-3.pairwise -d 120916 -c 1 -x 3 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012112.3482: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr1-3.pairwise -d 120916 -c 1 -x 3 -s 120916 -l 120916.int.bed
+Makefile.1379012114.21653: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr1-4.pairwise -d 120916 -c 1 -x 4 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012114.21653: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr1-4.pairwise -d 120916 -c 1 -x 4 -s 120916 -l 120916.int.bed
+Makefile.1379012117.19972: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr1-5.pairwise -d 120916 -c 1 -x 5 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012117.19972: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr1-5.pairwise -d 120916 -c 1 -x 5 -s 120916 -l 120916.int.bed
+Makefile.1379012119.14451: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr1-6.pairwise -d 120916 -c 1 -x 6 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012119.14451: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr1-6.pairwise -d 120916 -c 1 -x 6 -s 120916 -l 120916.int.bed
+Makefile.1379012122.17397: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr1-7.pairwise -d 120916 -c 1 -x 7 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012122.17397: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr1-7.pairwise -d 120916 -c 1 -x 7 -s 120916 -l 120916.int.bed
+Makefile.1379012124.25053: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr1-8.pairwise -d 120916 -c 1 -x 8 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012124.25053: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr1-8.pairwise -d 120916 -c 1 -x 8 -s 120916 -l 120916.int.bed
+Makefile.1379012126.30703: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr1-9.pairwise -d 120916 -c 1 -x 9 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012126.30703: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr1-9.pairwise -d 120916 -c 1 -x 9 -s 120916 -l 120916.int.bed
+Makefile.1379012129.20701: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr1-10.pairwise -d 120916 -c 1 -x 10 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012129.20701: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr1-10.pairwise -d 120916 -c 1 -x 10 -s 120916 -l 120916.int.bed
+Makefile.1379012132.599: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr1-11.pairwise -d 120916 -c 1 -x 11 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012132.599: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr1-11.pairwise -d 120916 -c 1 -x 11 -s 120916 -l 120916.int.bed
+Makefile.1379012134.10775: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr1-12.pairwise -d 120916 -c 1 -x 12 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012134.10775: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr1-12.pairwise -d 120916 -c 1 -x 12 -s 120916 -l 120916.int.bed
+Makefile.1379012137.20986: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr1-13.pairwise -d 120916 -c 1 -x 13 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012137.20986: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr1-13.pairwise -d 120916 -c 1 -x 13 -s 120916 -l 120916.int.bed
+Makefile.1379012140.18660: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr1-14.pairwise -d 120916 -c 1 -x 14 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012140.18660: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr1-14.pairwise -d 120916 -c 1 -x 14 -s 120916 -l 120916.int.bed
+Makefile.1379012142.14672: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr1-15.pairwise -d 120916 -c 1 -x 15 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012142.14672: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr1-15.pairwise -d 120916 -c 1 -x 15 -s 120916 -l 120916.int.bed
+Makefile.1379012145.16597: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr1-16.pairwise -d 120916 -c 1 -x 16 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012145.16597: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr1-16.pairwise -d 120916 -c 1 -x 16 -s 120916 -l 120916.int.bed
+Makefile.1379012148.22419: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr1-17.pairwise -d 120916 -c 1 -x 17 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012148.22419: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr1-17.pairwise -d 120916 -c 1 -x 17 -s 120916 -l 120916.int.bed
+Makefile.1379012150.19515: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr1-18.pairwise -d 120916 -c 1 -x 18 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012150.19515: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr1-18.pairwise -d 120916 -c 1 -x 18 -s 120916 -l 120916.int.bed
+Makefile.1379012153.19768: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr1-19.pairwise -d 120916 -c 1 -x 19 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012153.19768: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr1-19.pairwise -d 120916 -c 1 -x 19 -s 120916 -l 120916.int.bed
+Makefile.1379012155.32343: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr1-20.pairwise -d 120916 -c 1 -x 20 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012155.32343: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr1-20.pairwise -d 120916 -c 1 -x 20 -s 120916 -l 120916.int.bed
+Makefile.1379012157.24024: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr1-21.pairwise -d 120916 -c 1 -x 21 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012157.24024: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr1-21.pairwise -d 120916 -c 1 -x 21 -s 120916 -l 120916.int.bed
+Makefile.1379012160.2602: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr1-22.pairwise -d 120916 -c 1 -x 22 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012160.2602: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr1-22.pairwise -d 120916 -c 1 -x 22 -s 120916 -l 120916.int.bed
+Makefile.1379012162.19579: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr2-1.pairwise -d 120916 -c 2 -x 1 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012162.19579: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr2-1.pairwise -d 120916 -c 2 -x 1 -s 120916 -l 120916.int.bed
+Makefile.1379012164.19779: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr2-2.pairwise -d 120916 -c 2 -x 2 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012164.19779: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr2-2.pairwise -d 120916 -c 2 -x 2 -s 120916 -l 120916.int.bed
+Makefile.1379012166.6180: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr2-3.pairwise -d 120916 -c 2 -x 3 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012166.6180: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr2-3.pairwise -d 120916 -c 2 -x 3 -s 120916 -l 120916.int.bed
+Makefile.1379012169.11634: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr2-4.pairwise -d 120916 -c 2 -x 4 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012169.11634: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr2-4.pairwise -d 120916 -c 2 -x 4 -s 120916 -l 120916.int.bed
+Makefile.1379012171.17835: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr2-5.pairwise -d 120916 -c 2 -x 5 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012171.17835: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr2-5.pairwise -d 120916 -c 2 -x 5 -s 120916 -l 120916.int.bed
+Makefile.1379012174.31369: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr2-6.pairwise -d 120916 -c 2 -x 6 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012174.31369: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr2-6.pairwise -d 120916 -c 2 -x 6 -s 120916 -l 120916.int.bed
+Makefile.1379012176.635: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr2-7.pairwise -d 120916 -c 2 -x 7 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012176.635: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr2-7.pairwise -d 120916 -c 2 -x 7 -s 120916 -l 120916.int.bed
+Makefile.1379012178.5918: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr2-8.pairwise -d 120916 -c 2 -x 8 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012178.5918: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr2-8.pairwise -d 120916 -c 2 -x 8 -s 120916 -l 120916.int.bed
+Makefile.1379012181.7746: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr2-9.pairwise -d 120916 -c 2 -x 9 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012181.7746: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr2-9.pairwise -d 120916 -c 2 -x 9 -s 120916 -l 120916.int.bed
+Makefile.1379012183.26850: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr2-10.pairwise -d 120916 -c 2 -x 10 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012183.26850: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr2-10.pairwise -d 120916 -c 2 -x 10 -s 120916 -l 120916.int.bed
+Makefile.1379012185.11944: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr2-11.pairwise -d 120916 -c 2 -x 11 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012185.11944: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr2-11.pairwise -d 120916 -c 2 -x 11 -s 120916 -l 120916.int.bed
+Makefile.1379012187.8562: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr2-12.pairwise -d 120916 -c 2 -x 12 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012187.8562: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr2-12.pairwise -d 120916 -c 2 -x 12 -s 120916 -l 120916.int.bed
+Makefile.1379012189.25206: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr2-13.pairwise -d 120916 -c 2 -x 13 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012189.25206: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr2-13.pairwise -d 120916 -c 2 -x 13 -s 120916 -l 120916.int.bed
+Makefile.1379012191.1138: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr2-14.pairwise -d 120916 -c 2 -x 14 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012191.1138: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr2-14.pairwise -d 120916 -c 2 -x 14 -s 120916 -l 120916.int.bed
+Makefile.1379012194.7304: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr2-15.pairwise -d 120916 -c 2 -x 15 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012194.7304: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr2-15.pairwise -d 120916 -c 2 -x 15 -s 120916 -l 120916.int.bed
+Makefile.1379012197.1164: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr2-16.pairwise -d 120916 -c 2 -x 16 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012197.1164: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr2-16.pairwise -d 120916 -c 2 -x 16 -s 120916 -l 120916.int.bed
+Makefile.1379012199.6336: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr2-17.pairwise -d 120916 -c 2 -x 17 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012199.6336: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr2-17.pairwise -d 120916 -c 2 -x 17 -s 120916 -l 120916.int.bed
+Makefile.1379012202.24425: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr2-18.pairwise -d 120916 -c 2 -x 18 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012202.24425: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr2-18.pairwise -d 120916 -c 2 -x 18 -s 120916 -l 120916.int.bed
+Makefile.1379012204.6013: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr2-19.pairwise -d 120916 -c 2 -x 19 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012204.6013: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr2-19.pairwise -d 120916 -c 2 -x 19 -s 120916 -l 120916.int.bed
+Makefile.1379012206.901: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr2-20.pairwise -d 120916 -c 2 -x 20 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012206.901: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr2-20.pairwise -d 120916 -c 2 -x 20 -s 120916 -l 120916.int.bed
+Makefile.1379012208.17142: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr2-21.pairwise -d 120916 -c 2 -x 21 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012208.17142: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr2-21.pairwise -d 120916 -c 2 -x 21 -s 120916 -l 120916.int.bed
+Makefile.1379012210.23225: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr2-22.pairwise -d 120916 -c 2 -x 22 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012210.23225: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr2-22.pairwise -d 120916 -c 2 -x 22 -s 120916 -l 120916.int.bed
+Makefile.1379012213.15850: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr3-1.pairwise -d 120916 -c 3 -x 1 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012213.15850: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr3-1.pairwise -d 120916 -c 3 -x 1 -s 120916 -l 120916.int.bed
+Makefile.1379012215.14931: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr3-2.pairwise -d 120916 -c 3 -x 2 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012215.14931: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr3-2.pairwise -d 120916 -c 3 -x 2 -s 120916 -l 120916.int.bed
+Makefile.1379012217.25796: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr3-3.pairwise -d 120916 -c 3 -x 3 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012217.25796: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr3-3.pairwise -d 120916 -c 3 -x 3 -s 120916 -l 120916.int.bed
+Makefile.1379012219.13751: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr3-4.pairwise -d 120916 -c 3 -x 4 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012219.13751: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr3-4.pairwise -d 120916 -c 3 -x 4 -s 120916 -l 120916.int.bed
+Makefile.1379012220.4613: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr3-5.pairwise -d 120916 -c 3 -x 5 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012220.4613: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr3-5.pairwise -d 120916 -c 3 -x 5 -s 120916 -l 120916.int.bed
+Makefile.1379012222.10955: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr3-6.pairwise -d 120916 -c 3 -x 6 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012222.10955: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr3-6.pairwise -d 120916 -c 3 -x 6 -s 120916 -l 120916.int.bed
+Makefile.1379012224.26380: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr3-7.pairwise -d 120916 -c 3 -x 7 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012224.26380: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr3-7.pairwise -d 120916 -c 3 -x 7 -s 120916 -l 120916.int.bed
+Makefile.1379012226.31611: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr3-8.pairwise -d 120916 -c 3 -x 8 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012226.31611: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr3-8.pairwise -d 120916 -c 3 -x 8 -s 120916 -l 120916.int.bed
+Makefile.1379012227.14997: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr3-9.pairwise -d 120916 -c 3 -x 9 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012227.14997: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr3-9.pairwise -d 120916 -c 3 -x 9 -s 120916 -l 120916.int.bed
+Makefile.1379012229.1438: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr3-10.pairwise -d 120916 -c 3 -x 10 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012229.1438: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr3-10.pairwise -d 120916 -c 3 -x 10 -s 120916 -l 120916.int.bed
+Makefile.1379012231.8472: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr3-11.pairwise -d 120916 -c 3 -x 11 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012231.8472: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr3-11.pairwise -d 120916 -c 3 -x 11 -s 120916 -l 120916.int.bed
+Makefile.1379012233.10928: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr3-12.pairwise -d 120916 -c 3 -x 12 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012233.10928: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr3-12.pairwise -d 120916 -c 3 -x 12 -s 120916 -l 120916.int.bed
+Makefile.1379012235.10755: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr3-13.pairwise -d 120916 -c 3 -x 13 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012235.10755: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr3-13.pairwise -d 120916 -c 3 -x 13 -s 120916 -l 120916.int.bed
+Makefile.1379012237.317: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr3-14.pairwise -d 120916 -c 3 -x 14 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012237.317: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr3-14.pairwise -d 120916 -c 3 -x 14 -s 120916 -l 120916.int.bed
+Makefile.1379012239.4346: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr3-15.pairwise -d 120916 -c 3 -x 15 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012239.4346: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr3-15.pairwise -d 120916 -c 3 -x 15 -s 120916 -l 120916.int.bed
+Makefile.1379012241.1254: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr3-16.pairwise -d 120916 -c 3 -x 16 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012241.1254: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr3-16.pairwise -d 120916 -c 3 -x 16 -s 120916 -l 120916.int.bed
+Makefile.1379012243.27243: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr3-17.pairwise -d 120916 -c 3 -x 17 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012243.27243: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr3-17.pairwise -d 120916 -c 3 -x 17 -s 120916 -l 120916.int.bed
+Makefile.1379012246.14516: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr3-18.pairwise -d 120916 -c 3 -x 18 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012246.14516: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr3-18.pairwise -d 120916 -c 3 -x 18 -s 120916 -l 120916.int.bed
+Makefile.1379012248.26673: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr3-19.pairwise -d 120916 -c 3 -x 19 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012248.26673: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr3-19.pairwise -d 120916 -c 3 -x 19 -s 120916 -l 120916.int.bed
+Makefile.1379012250.19499: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr3-20.pairwise -d 120916 -c 3 -x 20 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012250.19499: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr3-20.pairwise -d 120916 -c 3 -x 20 -s 120916 -l 120916.int.bed
+Makefile.1379012252.3401: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr3-21.pairwise -d 120916 -c 3 -x 21 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012252.3401: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr3-21.pairwise -d 120916 -c 3 -x 21 -s 120916 -l 120916.int.bed
+Makefile.1379012254.30302: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr3-22.pairwise -d 120916 -c 3 -x 22 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012254.30302: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr3-22.pairwise -d 120916 -c 3 -x 22 -s 120916 -l 120916.int.bed
+Makefile.1379012257.26849: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr4-1.pairwise -d 120916 -c 4 -x 1 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012257.26849: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr4-1.pairwise -d 120916 -c 4 -x 1 -s 120916 -l 120916.int.bed
+Makefile.1379012259.25891: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr4-2.pairwise -d 120916 -c 4 -x 2 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012259.25891: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr4-2.pairwise -d 120916 -c 4 -x 2 -s 120916 -l 120916.int.bed
+Makefile.1379012261.22916: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr4-3.pairwise -d 120916 -c 4 -x 3 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012261.22916: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr4-3.pairwise -d 120916 -c 4 -x 3 -s 120916 -l 120916.int.bed
+Makefile.1379012263.13790: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr4-4.pairwise -d 120916 -c 4 -x 4 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012263.13790: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr4-4.pairwise -d 120916 -c 4 -x 4 -s 120916 -l 120916.int.bed
+Makefile.1379012265.1964: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr4-5.pairwise -d 120916 -c 4 -x 5 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012265.1964: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr4-5.pairwise -d 120916 -c 4 -x 5 -s 120916 -l 120916.int.bed
+Makefile.1379012267.32061: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr4-6.pairwise -d 120916 -c 4 -x 6 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012267.32061: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr4-6.pairwise -d 120916 -c 4 -x 6 -s 120916 -l 120916.int.bed
+Makefile.1379012270.24617: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr4-7.pairwise -d 120916 -c 4 -x 7 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012270.24617: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr4-7.pairwise -d 120916 -c 4 -x 7 -s 120916 -l 120916.int.bed
+Makefile.1379012272.13162: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr4-8.pairwise -d 120916 -c 4 -x 8 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012272.13162: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr4-8.pairwise -d 120916 -c 4 -x 8 -s 120916 -l 120916.int.bed
+Makefile.1379012274.3774: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr4-9.pairwise -d 120916 -c 4 -x 9 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012274.3774: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr4-9.pairwise -d 120916 -c 4 -x 9 -s 120916 -l 120916.int.bed
+Makefile.1379012277.14486: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr4-10.pairwise -d 120916 -c 4 -x 10 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012277.14486: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr4-10.pairwise -d 120916 -c 4 -x 10 -s 120916 -l 120916.int.bed
+Makefile.1379012279.32603: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr4-11.pairwise -d 120916 -c 4 -x 11 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012279.32603: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr4-11.pairwise -d 120916 -c 4 -x 11 -s 120916 -l 120916.int.bed
+Makefile.1379012281.11177: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr4-12.pairwise -d 120916 -c 4 -x 12 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012281.11177: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr4-12.pairwise -d 120916 -c 4 -x 12 -s 120916 -l 120916.int.bed
+Makefile.1379012283.28418: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr4-13.pairwise -d 120916 -c 4 -x 13 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012283.28418: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr4-13.pairwise -d 120916 -c 4 -x 13 -s 120916 -l 120916.int.bed
+Makefile.1379012285.16374: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr4-14.pairwise -d 120916 -c 4 -x 14 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012285.16374: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr4-14.pairwise -d 120916 -c 4 -x 14 -s 120916 -l 120916.int.bed
+Makefile.1379012288.16978: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr4-15.pairwise -d 120916 -c 4 -x 15 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012288.16978: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr4-15.pairwise -d 120916 -c 4 -x 15 -s 120916 -l 120916.int.bed
+Makefile.1379012290.28183: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr4-16.pairwise -d 120916 -c 4 -x 16 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012290.28183: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr4-16.pairwise -d 120916 -c 4 -x 16 -s 120916 -l 120916.int.bed
+Makefile.1379012292.124: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr4-17.pairwise -d 120916 -c 4 -x 17 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012292.124: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr4-17.pairwise -d 120916 -c 4 -x 17 -s 120916 -l 120916.int.bed
+Makefile.1379012294.32395: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr4-18.pairwise -d 120916 -c 4 -x 18 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012294.32395: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr4-18.pairwise -d 120916 -c 4 -x 18 -s 120916 -l 120916.int.bed
+Makefile.1379012297.29344: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr4-19.pairwise -d 120916 -c 4 -x 19 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012297.29344: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr4-19.pairwise -d 120916 -c 4 -x 19 -s 120916 -l 120916.int.bed
+Makefile.1379012298.26016: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr4-20.pairwise -d 120916 -c 4 -x 20 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012298.26016: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr4-20.pairwise -d 120916 -c 4 -x 20 -s 120916 -l 120916.int.bed
+Makefile.1379012301.15759: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr4-21.pairwise -d 120916 -c 4 -x 21 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012301.15759: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr4-21.pairwise -d 120916 -c 4 -x 21 -s 120916 -l 120916.int.bed
+Makefile.1379012303.26219: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr4-22.pairwise -d 120916 -c 4 -x 22 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012303.26219: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr4-22.pairwise -d 120916 -c 4 -x 22 -s 120916 -l 120916.int.bed
+Makefile.1379012305.11445: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr5-1.pairwise -d 120916 -c 5 -x 1 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012305.11445: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr5-1.pairwise -d 120916 -c 5 -x 1 -s 120916 -l 120916.int.bed
+Makefile.1379012308.7874: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr5-2.pairwise -d 120916 -c 5 -x 2 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012308.7874: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr5-2.pairwise -d 120916 -c 5 -x 2 -s 120916 -l 120916.int.bed
+Makefile.1379012310.15002: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr5-3.pairwise -d 120916 -c 5 -x 3 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012310.15002: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr5-3.pairwise -d 120916 -c 5 -x 3 -s 120916 -l 120916.int.bed
+Makefile.1379012312.13394: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr5-4.pairwise -d 120916 -c 5 -x 4 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012312.13394: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr5-4.pairwise -d 120916 -c 5 -x 4 -s 120916 -l 120916.int.bed
+Makefile.1379012314.22758: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr5-5.pairwise -d 120916 -c 5 -x 5 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012314.22758: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr5-5.pairwise -d 120916 -c 5 -x 5 -s 120916 -l 120916.int.bed
+Makefile.1379012317.12733: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr5-6.pairwise -d 120916 -c 5 -x 6 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012317.12733: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr5-6.pairwise -d 120916 -c 5 -x 6 -s 120916 -l 120916.int.bed
+Makefile.1379012319.28801: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr5-7.pairwise -d 120916 -c 5 -x 7 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012319.28801: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr5-7.pairwise -d 120916 -c 5 -x 7 -s 120916 -l 120916.int.bed
+Makefile.1379012321.19479: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr5-8.pairwise -d 120916 -c 5 -x 8 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012321.19479: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr5-8.pairwise -d 120916 -c 5 -x 8 -s 120916 -l 120916.int.bed
+Makefile.1379012323.29597: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr5-9.pairwise -d 120916 -c 5 -x 9 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012323.29597: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr5-9.pairwise -d 120916 -c 5 -x 9 -s 120916 -l 120916.int.bed
+Makefile.1379012326.2942: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr5-10.pairwise -d 120916 -c 5 -x 10 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012326.2942: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr5-10.pairwise -d 120916 -c 5 -x 10 -s 120916 -l 120916.int.bed
+Makefile.1379012328.9438: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr5-11.pairwise -d 120916 -c 5 -x 11 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012328.9438: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr5-11.pairwise -d 120916 -c 5 -x 11 -s 120916 -l 120916.int.bed
+Makefile.1379012330.9486: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr5-12.pairwise -d 120916 -c 5 -x 12 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012330.9486: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr5-12.pairwise -d 120916 -c 5 -x 12 -s 120916 -l 120916.int.bed
+Makefile.1379012333.12743: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr5-13.pairwise -d 120916 -c 5 -x 13 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012333.12743: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr5-13.pairwise -d 120916 -c 5 -x 13 -s 120916 -l 120916.int.bed
+Makefile.1379012335.27614: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr5-14.pairwise -d 120916 -c 5 -x 14 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012335.27614: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr5-14.pairwise -d 120916 -c 5 -x 14 -s 120916 -l 120916.int.bed
+Makefile.1379012337.21528: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr5-15.pairwise -d 120916 -c 5 -x 15 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012337.21528: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr5-15.pairwise -d 120916 -c 5 -x 15 -s 120916 -l 120916.int.bed
+Makefile.1379012339.7670: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr5-16.pairwise -d 120916 -c 5 -x 16 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012339.7670: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr5-16.pairwise -d 120916 -c 5 -x 16 -s 120916 -l 120916.int.bed
+Makefile.1379012342.16791: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr5-17.pairwise -d 120916 -c 5 -x 17 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012342.16791: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr5-17.pairwise -d 120916 -c 5 -x 17 -s 120916 -l 120916.int.bed
+Makefile.1379012345.3495: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr5-18.pairwise -d 120916 -c 5 -x 18 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012345.3495: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr5-18.pairwise -d 120916 -c 5 -x 18 -s 120916 -l 120916.int.bed
+Makefile.1379012346.2692: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr5-19.pairwise -d 120916 -c 5 -x 19 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012346.2692: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr5-19.pairwise -d 120916 -c 5 -x 19 -s 120916 -l 120916.int.bed
+Makefile.1379012348.3636: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr5-20.pairwise -d 120916 -c 5 -x 20 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012348.3636: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr5-20.pairwise -d 120916 -c 5 -x 20 -s 120916 -l 120916.int.bed
+Makefile.1379012350.4350: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr5-21.pairwise -d 120916 -c 5 -x 21 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012350.4350: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr5-21.pairwise -d 120916 -c 5 -x 21 -s 120916 -l 120916.int.bed
+Makefile.1379012353.29135: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr5-22.pairwise -d 120916 -c 5 -x 22 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012353.29135: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr5-22.pairwise -d 120916 -c 5 -x 22 -s 120916 -l 120916.int.bed
+Makefile.1379012355.10382: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr6-1.pairwise -d 120916 -c 6 -x 1 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012355.10382: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr6-1.pairwise -d 120916 -c 6 -x 1 -s 120916 -l 120916.int.bed
+Makefile.1379012357.25642: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr6-2.pairwise -d 120916 -c 6 -x 2 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012357.25642: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr6-2.pairwise -d 120916 -c 6 -x 2 -s 120916 -l 120916.int.bed
+Makefile.1379012359.8014: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr6-3.pairwise -d 120916 -c 6 -x 3 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012359.8014: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr6-3.pairwise -d 120916 -c 6 -x 3 -s 120916 -l 120916.int.bed
+Makefile.1379012361.172: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr6-4.pairwise -d 120916 -c 6 -x 4 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012361.172: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr6-4.pairwise -d 120916 -c 6 -x 4 -s 120916 -l 120916.int.bed
+Makefile.1379012364.24355: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr6-5.pairwise -d 120916 -c 6 -x 5 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012364.24355: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr6-5.pairwise -d 120916 -c 6 -x 5 -s 120916 -l 120916.int.bed
+Makefile.1379012367.10563: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr6-6.pairwise -d 120916 -c 6 -x 6 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012367.10563: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr6-6.pairwise -d 120916 -c 6 -x 6 -s 120916 -l 120916.int.bed
+Makefile.1379012368.16432: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr6-7.pairwise -d 120916 -c 6 -x 7 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012368.16432: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr6-7.pairwise -d 120916 -c 6 -x 7 -s 120916 -l 120916.int.bed
+Makefile.1379012371.16580: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr6-8.pairwise -d 120916 -c 6 -x 8 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012371.16580: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr6-8.pairwise -d 120916 -c 6 -x 8 -s 120916 -l 120916.int.bed
+Makefile.1379012373.3659: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr6-9.pairwise -d 120916 -c 6 -x 9 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012373.3659: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr6-9.pairwise -d 120916 -c 6 -x 9 -s 120916 -l 120916.int.bed
+Makefile.1379012375.1415: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr6-10.pairwise -d 120916 -c 6 -x 10 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012375.1415: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr6-10.pairwise -d 120916 -c 6 -x 10 -s 120916 -l 120916.int.bed
+Makefile.1379012377.4419: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr6-11.pairwise -d 120916 -c 6 -x 11 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012377.4419: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr6-11.pairwise -d 120916 -c 6 -x 11 -s 120916 -l 120916.int.bed
+Makefile.1379012380.2628: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr6-12.pairwise -d 120916 -c 6 -x 12 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012380.2628: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr6-12.pairwise -d 120916 -c 6 -x 12 -s 120916 -l 120916.int.bed
+Makefile.1379012382.30250: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr6-13.pairwise -d 120916 -c 6 -x 13 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012382.30250: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr6-13.pairwise -d 120916 -c 6 -x 13 -s 120916 -l 120916.int.bed
+Makefile.1379012384.25338: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr6-14.pairwise -d 120916 -c 6 -x 14 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012384.25338: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr6-14.pairwise -d 120916 -c 6 -x 14 -s 120916 -l 120916.int.bed
+Makefile.1379012386.28025: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr6-15.pairwise -d 120916 -c 6 -x 15 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012386.28025: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr6-15.pairwise -d 120916 -c 6 -x 15 -s 120916 -l 120916.int.bed
+Makefile.1379012388.31987: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr6-16.pairwise -d 120916 -c 6 -x 16 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012388.31987: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr6-16.pairwise -d 120916 -c 6 -x 16 -s 120916 -l 120916.int.bed
+Makefile.1379012390.17987: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr6-17.pairwise -d 120916 -c 6 -x 17 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012390.17987: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr6-17.pairwise -d 120916 -c 6 -x 17 -s 120916 -l 120916.int.bed
+Makefile.1379012392.24648: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr6-18.pairwise -d 120916 -c 6 -x 18 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012392.24648: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr6-18.pairwise -d 120916 -c 6 -x 18 -s 120916 -l 120916.int.bed
+Makefile.1379012394.17095: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr6-19.pairwise -d 120916 -c 6 -x 19 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012394.17095: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr6-19.pairwise -d 120916 -c 6 -x 19 -s 120916 -l 120916.int.bed
+Makefile.1379012397.14686: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr6-20.pairwise -d 120916 -c 6 -x 20 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012397.14686: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr6-20.pairwise -d 120916 -c 6 -x 20 -s 120916 -l 120916.int.bed
+Makefile.1379012399.23999: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr6-21.pairwise -d 120916 -c 6 -x 21 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012399.23999: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr6-21.pairwise -d 120916 -c 6 -x 21 -s 120916 -l 120916.int.bed
+Makefile.1379012401.25940: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr6-22.pairwise -d 120916 -c 6 -x 22 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012401.25940: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr6-22.pairwise -d 120916 -c 6 -x 22 -s 120916 -l 120916.int.bed
+Makefile.1379012403.15790: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr7-1.pairwise -d 120916 -c 7 -x 1 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012403.15790: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr7-1.pairwise -d 120916 -c 7 -x 1 -s 120916 -l 120916.int.bed
+Makefile.1379012405.16739: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr7-2.pairwise -d 120916 -c 7 -x 2 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012405.16739: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr7-2.pairwise -d 120916 -c 7 -x 2 -s 120916 -l 120916.int.bed
+Makefile.1379012407.21415: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr7-3.pairwise -d 120916 -c 7 -x 3 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012407.21415: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr7-3.pairwise -d 120916 -c 7 -x 3 -s 120916 -l 120916.int.bed
+Makefile.1379012409.13972: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr7-4.pairwise -d 120916 -c 7 -x 4 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012409.13972: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr7-4.pairwise -d 120916 -c 7 -x 4 -s 120916 -l 120916.int.bed
+Makefile.1379012412.25970: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr7-5.pairwise -d 120916 -c 7 -x 5 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012412.25970: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr7-5.pairwise -d 120916 -c 7 -x 5 -s 120916 -l 120916.int.bed
+Makefile.1379012414.3237: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr7-6.pairwise -d 120916 -c 7 -x 6 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012414.3237: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr7-6.pairwise -d 120916 -c 7 -x 6 -s 120916 -l 120916.int.bed
+Makefile.1379012416.8894: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr7-7.pairwise -d 120916 -c 7 -x 7 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012416.8894: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr7-7.pairwise -d 120916 -c 7 -x 7 -s 120916 -l 120916.int.bed
+Makefile.1379012418.8894: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr7-8.pairwise -d 120916 -c 7 -x 8 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012418.8894: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr7-8.pairwise -d 120916 -c 7 -x 8 -s 120916 -l 120916.int.bed
+Makefile.1379012420.12417: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr7-9.pairwise -d 120916 -c 7 -x 9 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012420.12417: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr7-9.pairwise -d 120916 -c 7 -x 9 -s 120916 -l 120916.int.bed
+Makefile.1379012422.23847: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr7-10.pairwise -d 120916 -c 7 -x 10 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012422.23847: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr7-10.pairwise -d 120916 -c 7 -x 10 -s 120916 -l 120916.int.bed
+Makefile.1379012425.7752: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr7-11.pairwise -d 120916 -c 7 -x 11 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012425.7752: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr7-11.pairwise -d 120916 -c 7 -x 11 -s 120916 -l 120916.int.bed
+Makefile.1379012427.27052: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr7-12.pairwise -d 120916 -c 7 -x 12 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012427.27052: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr7-12.pairwise -d 120916 -c 7 -x 12 -s 120916 -l 120916.int.bed
+Makefile.1379012431.15233: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr7-13.pairwise -d 120916 -c 7 -x 13 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012431.15233: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr7-13.pairwise -d 120916 -c 7 -x 13 -s 120916 -l 120916.int.bed
+Makefile.1379012433.14717: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr7-14.pairwise -d 120916 -c 7 -x 14 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012433.14717: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr7-14.pairwise -d 120916 -c 7 -x 14 -s 120916 -l 120916.int.bed
+Makefile.1379012435.20161: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr7-15.pairwise -d 120916 -c 7 -x 15 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012435.20161: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr7-15.pairwise -d 120916 -c 7 -x 15 -s 120916 -l 120916.int.bed
+Makefile.1379012437.28558: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr7-16.pairwise -d 120916 -c 7 -x 16 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012437.28558: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr7-16.pairwise -d 120916 -c 7 -x 16 -s 120916 -l 120916.int.bed
+Makefile.1379012439.5166: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr7-17.pairwise -d 120916 -c 7 -x 17 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012439.5166: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr7-17.pairwise -d 120916 -c 7 -x 17 -s 120916 -l 120916.int.bed
+Makefile.1379012442.17651: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr7-18.pairwise -d 120916 -c 7 -x 18 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012442.17651: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr7-18.pairwise -d 120916 -c 7 -x 18 -s 120916 -l 120916.int.bed
+Makefile.1379012445.22385: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr7-19.pairwise -d 120916 -c 7 -x 19 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012445.22385: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr7-19.pairwise -d 120916 -c 7 -x 19 -s 120916 -l 120916.int.bed
+Makefile.1379012447.29196: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr7-20.pairwise -d 120916 -c 7 -x 20 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012447.29196: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr7-20.pairwise -d 120916 -c 7 -x 20 -s 120916 -l 120916.int.bed
+Makefile.1379012449.32072: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr7-21.pairwise -d 120916 -c 7 -x 21 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012449.32072: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr7-21.pairwise -d 120916 -c 7 -x 21 -s 120916 -l 120916.int.bed
+Makefile.1379012451.28169: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr7-22.pairwise -d 120916 -c 7 -x 22 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012451.28169: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr7-22.pairwise -d 120916 -c 7 -x 22 -s 120916 -l 120916.int.bed
+Makefile.1379012454.11407: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr8-1.pairwise -d 120916 -c 8 -x 1 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012454.11407: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr8-1.pairwise -d 120916 -c 8 -x 1 -s 120916 -l 120916.int.bed
+Makefile.1379012456.12004: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr8-2.pairwise -d 120916 -c 8 -x 2 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012456.12004: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr8-2.pairwise -d 120916 -c 8 -x 2 -s 120916 -l 120916.int.bed
+Makefile.1379012459.26019: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr8-3.pairwise -d 120916 -c 8 -x 3 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012459.26019: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr8-3.pairwise -d 120916 -c 8 -x 3 -s 120916 -l 120916.int.bed
+Makefile.1379012461.17995: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr8-4.pairwise -d 120916 -c 8 -x 4 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012461.17995: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr8-4.pairwise -d 120916 -c 8 -x 4 -s 120916 -l 120916.int.bed
+Makefile.1379012464.26490: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr8-5.pairwise -d 120916 -c 8 -x 5 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012464.26490: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr8-5.pairwise -d 120916 -c 8 -x 5 -s 120916 -l 120916.int.bed
+Makefile.1379012466.11610: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr8-6.pairwise -d 120916 -c 8 -x 6 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012466.11610: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr8-6.pairwise -d 120916 -c 8 -x 6 -s 120916 -l 120916.int.bed
+Makefile.1379012469.16536: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr8-7.pairwise -d 120916 -c 8 -x 7 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012469.16536: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr8-7.pairwise -d 120916 -c 8 -x 7 -s 120916 -l 120916.int.bed
+Makefile.1379012471.26083: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr8-8.pairwise -d 120916 -c 8 -x 8 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012471.26083: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr8-8.pairwise -d 120916 -c 8 -x 8 -s 120916 -l 120916.int.bed
+Makefile.1379012473.20032: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr8-9.pairwise -d 120916 -c 8 -x 9 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012473.20032: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr8-9.pairwise -d 120916 -c 8 -x 9 -s 120916 -l 120916.int.bed
+Makefile.1379012475.14246: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr8-10.pairwise -d 120916 -c 8 -x 10 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012475.14246: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr8-10.pairwise -d 120916 -c 8 -x 10 -s 120916 -l 120916.int.bed
+Makefile.1379012477.3541: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr8-11.pairwise -d 120916 -c 8 -x 11 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012477.3541: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr8-11.pairwise -d 120916 -c 8 -x 11 -s 120916 -l 120916.int.bed
+Makefile.1379012480.25694: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr8-12.pairwise -d 120916 -c 8 -x 12 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012480.25694: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr8-12.pairwise -d 120916 -c 8 -x 12 -s 120916 -l 120916.int.bed
+Makefile.1379012482.32126: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr8-13.pairwise -d 120916 -c 8 -x 13 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012482.32126: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr8-13.pairwise -d 120916 -c 8 -x 13 -s 120916 -l 120916.int.bed
+Makefile.1379012484.15560: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr8-14.pairwise -d 120916 -c 8 -x 14 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012484.15560: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr8-14.pairwise -d 120916 -c 8 -x 14 -s 120916 -l 120916.int.bed
+Makefile.1379012486.5284: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr8-15.pairwise -d 120916 -c 8 -x 15 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012486.5284: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr8-15.pairwise -d 120916 -c 8 -x 15 -s 120916 -l 120916.int.bed
+Makefile.1379012489.1229: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr8-16.pairwise -d 120916 -c 8 -x 16 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012489.1229: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr8-16.pairwise -d 120916 -c 8 -x 16 -s 120916 -l 120916.int.bed
+Makefile.1379012491.16094: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr8-17.pairwise -d 120916 -c 8 -x 17 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012491.16094: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr8-17.pairwise -d 120916 -c 8 -x 17 -s 120916 -l 120916.int.bed
+Makefile.1379012492.6629: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr8-18.pairwise -d 120916 -c 8 -x 18 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012492.6629: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr8-18.pairwise -d 120916 -c 8 -x 18 -s 120916 -l 120916.int.bed
+Makefile.1379012494.17250: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr8-19.pairwise -d 120916 -c 8 -x 19 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012494.17250: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr8-19.pairwise -d 120916 -c 8 -x 19 -s 120916 -l 120916.int.bed
+Makefile.1379012496.17740: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr8-20.pairwise -d 120916 -c 8 -x 20 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012496.17740: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr8-20.pairwise -d 120916 -c 8 -x 20 -s 120916 -l 120916.int.bed
+Makefile.1379012498.7123: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr8-21.pairwise -d 120916 -c 8 -x 21 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012498.7123: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr8-21.pairwise -d 120916 -c 8 -x 21 -s 120916 -l 120916.int.bed
+Makefile.1379012501.6074: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr8-22.pairwise -d 120916 -c 8 -x 22 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012501.6074: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr8-22.pairwise -d 120916 -c 8 -x 22 -s 120916 -l 120916.int.bed
+Makefile.1379012504.19004: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr9-1.pairwise -d 120916 -c 9 -x 1 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012504.19004: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr9-1.pairwise -d 120916 -c 9 -x 1 -s 120916 -l 120916.int.bed
+Makefile.1379012506.1468: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr9-2.pairwise -d 120916 -c 9 -x 2 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012506.1468: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr9-2.pairwise -d 120916 -c 9 -x 2 -s 120916 -l 120916.int.bed
+Makefile.1379012508.21203: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr9-3.pairwise -d 120916 -c 9 -x 3 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012508.21203: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr9-3.pairwise -d 120916 -c 9 -x 3 -s 120916 -l 120916.int.bed
+Makefile.1379012509.31328: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr9-4.pairwise -d 120916 -c 9 -x 4 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012509.31328: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr9-4.pairwise -d 120916 -c 9 -x 4 -s 120916 -l 120916.int.bed
+Makefile.1379012511.7533: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr9-5.pairwise -d 120916 -c 9 -x 5 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012511.7533: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr9-5.pairwise -d 120916 -c 9 -x 5 -s 120916 -l 120916.int.bed
+Makefile.1379012513.2175: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr9-6.pairwise -d 120916 -c 9 -x 6 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012513.2175: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr9-6.pairwise -d 120916 -c 9 -x 6 -s 120916 -l 120916.int.bed
+Makefile.1379012516.25584: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr9-7.pairwise -d 120916 -c 9 -x 7 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012516.25584: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr9-7.pairwise -d 120916 -c 9 -x 7 -s 120916 -l 120916.int.bed
+Makefile.1379012518.7410: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr9-8.pairwise -d 120916 -c 9 -x 8 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012518.7410: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr9-8.pairwise -d 120916 -c 9 -x 8 -s 120916 -l 120916.int.bed
+Makefile.1379012521.16324: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr9-9.pairwise -d 120916 -c 9 -x 9 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012521.16324: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr9-9.pairwise -d 120916 -c 9 -x 9 -s 120916 -l 120916.int.bed
+Makefile.1379012523.2642: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr9-10.pairwise -d 120916 -c 9 -x 10 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012523.2642: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr9-10.pairwise -d 120916 -c 9 -x 10 -s 120916 -l 120916.int.bed
+Makefile.1379012525.6818: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr9-11.pairwise -d 120916 -c 9 -x 11 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012525.6818: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr9-11.pairwise -d 120916 -c 9 -x 11 -s 120916 -l 120916.int.bed
+Makefile.1379012527.24634: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr9-12.pairwise -d 120916 -c 9 -x 12 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012527.24634: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr9-12.pairwise -d 120916 -c 9 -x 12 -s 120916 -l 120916.int.bed
+Makefile.1379012530.18514: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr9-13.pairwise -d 120916 -c 9 -x 13 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012530.18514: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr9-13.pairwise -d 120916 -c 9 -x 13 -s 120916 -l 120916.int.bed
+Makefile.1379012532.17702: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr9-14.pairwise -d 120916 -c 9 -x 14 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012532.17702: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr9-14.pairwise -d 120916 -c 9 -x 14 -s 120916 -l 120916.int.bed
+Makefile.1379012534.6917: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr9-15.pairwise -d 120916 -c 9 -x 15 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012534.6917: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr9-15.pairwise -d 120916 -c 9 -x 15 -s 120916 -l 120916.int.bed
+Makefile.1379012535.11004: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr9-16.pairwise -d 120916 -c 9 -x 16 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012535.11004: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr9-16.pairwise -d 120916 -c 9 -x 16 -s 120916 -l 120916.int.bed
+Makefile.1379012538.11993: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr9-17.pairwise -d 120916 -c 9 -x 17 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012538.11993: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr9-17.pairwise -d 120916 -c 9 -x 17 -s 120916 -l 120916.int.bed
+Makefile.1379012540.8884: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr9-18.pairwise -d 120916 -c 9 -x 18 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012540.8884: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr9-18.pairwise -d 120916 -c 9 -x 18 -s 120916 -l 120916.int.bed
+Makefile.1379012543.3312: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr9-19.pairwise -d 120916 -c 9 -x 19 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012543.3312: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr9-19.pairwise -d 120916 -c 9 -x 19 -s 120916 -l 120916.int.bed
+Makefile.1379012545.6189: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr9-20.pairwise -d 120916 -c 9 -x 20 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012545.6189: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr9-20.pairwise -d 120916 -c 9 -x 20 -s 120916 -l 120916.int.bed
+Makefile.1379012548.3351: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr9-21.pairwise -d 120916 -c 9 -x 21 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012548.3351: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr9-21.pairwise -d 120916 -c 9 -x 21 -s 120916 -l 120916.int.bed
+Makefile.1379012550.3024: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr9-22.pairwise -d 120916 -c 9 -x 22 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012550.3024: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr9-22.pairwise -d 120916 -c 9 -x 22 -s 120916 -l 120916.int.bed
+Makefile.1379012552.27062: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr10-1.pairwise -d 120916 -c 10 -x 1 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012552.27062: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr10-1.pairwise -d 120916 -c 10 -x 1 -s 120916 -l 120916.int.bed
+Makefile.1379012555.24266: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr10-2.pairwise -d 120916 -c 10 -x 2 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012555.24266: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr10-2.pairwise -d 120916 -c 10 -x 2 -s 120916 -l 120916.int.bed
+Makefile.1379012557.32676: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr10-3.pairwise -d 120916 -c 10 -x 3 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012557.32676: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr10-3.pairwise -d 120916 -c 10 -x 3 -s 120916 -l 120916.int.bed
+Makefile.1379012559.30497: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr10-4.pairwise -d 120916 -c 10 -x 4 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012559.30497: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr10-4.pairwise -d 120916 -c 10 -x 4 -s 120916 -l 120916.int.bed
+Makefile.1379012562.30569: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr10-5.pairwise -d 120916 -c 10 -x 5 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012562.30569: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr10-5.pairwise -d 120916 -c 10 -x 5 -s 120916 -l 120916.int.bed
+Makefile.1379012564.24573: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr10-6.pairwise -d 120916 -c 10 -x 6 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012564.24573: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr10-6.pairwise -d 120916 -c 10 -x 6 -s 120916 -l 120916.int.bed
+Makefile.1379012566.9124: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr10-7.pairwise -d 120916 -c 10 -x 7 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012566.9124: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr10-7.pairwise -d 120916 -c 10 -x 7 -s 120916 -l 120916.int.bed
+Makefile.1379012568.5487: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr10-8.pairwise -d 120916 -c 10 -x 8 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012568.5487: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr10-8.pairwise -d 120916 -c 10 -x 8 -s 120916 -l 120916.int.bed
+Makefile.1379012571.10511: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr10-9.pairwise -d 120916 -c 10 -x 9 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012571.10511: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr10-9.pairwise -d 120916 -c 10 -x 9 -s 120916 -l 120916.int.bed
+Makefile.1379012573.2510: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr10-10.pairwise -d 120916 -c 10 -x 10 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012573.2510: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr10-10.pairwise -d 120916 -c 10 -x 10 -s 120916 -l 120916.int.bed
+Makefile.1379012576.9553: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr10-11.pairwise -d 120916 -c 10 -x 11 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012576.9553: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr10-11.pairwise -d 120916 -c 10 -x 11 -s 120916 -l 120916.int.bed
+Makefile.1379012578.31918: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr10-12.pairwise -d 120916 -c 10 -x 12 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012578.31918: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr10-12.pairwise -d 120916 -c 10 -x 12 -s 120916 -l 120916.int.bed
+Makefile.1379012580.32333: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr10-13.pairwise -d 120916 -c 10 -x 13 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012580.32333: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr10-13.pairwise -d 120916 -c 10 -x 13 -s 120916 -l 120916.int.bed
+Makefile.1379012583.6283: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr10-14.pairwise -d 120916 -c 10 -x 14 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012583.6283: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr10-14.pairwise -d 120916 -c 10 -x 14 -s 120916 -l 120916.int.bed
+Makefile.1379012584.11024: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr10-15.pairwise -d 120916 -c 10 -x 15 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012584.11024: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr10-15.pairwise -d 120916 -c 10 -x 15 -s 120916 -l 120916.int.bed
+Makefile.1379012586.752: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr10-16.pairwise -d 120916 -c 10 -x 16 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012586.752: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr10-16.pairwise -d 120916 -c 10 -x 16 -s 120916 -l 120916.int.bed
+Makefile.1379012588.4221: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr10-17.pairwise -d 120916 -c 10 -x 17 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012588.4221: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr10-17.pairwise -d 120916 -c 10 -x 17 -s 120916 -l 120916.int.bed
+Makefile.1379012590.13101: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr10-18.pairwise -d 120916 -c 10 -x 18 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012590.13101: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr10-18.pairwise -d 120916 -c 10 -x 18 -s 120916 -l 120916.int.bed
+Makefile.1379012592.5791: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr10-19.pairwise -d 120916 -c 10 -x 19 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012592.5791: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr10-19.pairwise -d 120916 -c 10 -x 19 -s 120916 -l 120916.int.bed
+Makefile.1379012594.2610: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr10-20.pairwise -d 120916 -c 10 -x 20 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012594.2610: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr10-20.pairwise -d 120916 -c 10 -x 20 -s 120916 -l 120916.int.bed
+Makefile.1379012596.8531: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr10-21.pairwise -d 120916 -c 10 -x 21 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012596.8531: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr10-21.pairwise -d 120916 -c 10 -x 21 -s 120916 -l 120916.int.bed
+Makefile.1379012599.25604: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr10-22.pairwise -d 120916 -c 10 -x 22 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012599.25604: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr10-22.pairwise -d 120916 -c 10 -x 22 -s 120916 -l 120916.int.bed
+Makefile.1379012601.2213: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr11-1.pairwise -d 120916 -c 11 -x 1 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012601.2213: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr11-1.pairwise -d 120916 -c 11 -x 1 -s 120916 -l 120916.int.bed
+Makefile.1379012604.8146: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr11-2.pairwise -d 120916 -c 11 -x 2 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012604.8146: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr11-2.pairwise -d 120916 -c 11 -x 2 -s 120916 -l 120916.int.bed
+Makefile.1379012606.16167: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr11-3.pairwise -d 120916 -c 11 -x 3 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012606.16167: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr11-3.pairwise -d 120916 -c 11 -x 3 -s 120916 -l 120916.int.bed
+Makefile.1379012608.15831: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr11-4.pairwise -d 120916 -c 11 -x 4 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012608.15831: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr11-4.pairwise -d 120916 -c 11 -x 4 -s 120916 -l 120916.int.bed
+Makefile.1379012610.20624: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr11-5.pairwise -d 120916 -c 11 -x 5 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012610.20624: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr11-5.pairwise -d 120916 -c 11 -x 5 -s 120916 -l 120916.int.bed
+Makefile.1379012612.4001: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr11-6.pairwise -d 120916 -c 11 -x 6 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012612.4001: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr11-6.pairwise -d 120916 -c 11 -x 6 -s 120916 -l 120916.int.bed
+Makefile.1379012614.31286: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr11-7.pairwise -d 120916 -c 11 -x 7 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012614.31286: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr11-7.pairwise -d 120916 -c 11 -x 7 -s 120916 -l 120916.int.bed
+Makefile.1379012616.6782: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr11-8.pairwise -d 120916 -c 11 -x 8 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012616.6782: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr11-8.pairwise -d 120916 -c 11 -x 8 -s 120916 -l 120916.int.bed
+Makefile.1379012619.31161: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr11-9.pairwise -d 120916 -c 11 -x 9 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012619.31161: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr11-9.pairwise -d 120916 -c 11 -x 9 -s 120916 -l 120916.int.bed
+Makefile.1379012621.13464: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr11-10.pairwise -d 120916 -c 11 -x 10 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012621.13464: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr11-10.pairwise -d 120916 -c 11 -x 10 -s 120916 -l 120916.int.bed
+Makefile.1379012623.20889: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr11-11.pairwise -d 120916 -c 11 -x 11 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012623.20889: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr11-11.pairwise -d 120916 -c 11 -x 11 -s 120916 -l 120916.int.bed
+Makefile.1379012625.3618: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr11-12.pairwise -d 120916 -c 11 -x 12 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012625.3618: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr11-12.pairwise -d 120916 -c 11 -x 12 -s 120916 -l 120916.int.bed
+Makefile.1379012626.31758: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr11-13.pairwise -d 120916 -c 11 -x 13 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012626.31758: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr11-13.pairwise -d 120916 -c 11 -x 13 -s 120916 -l 120916.int.bed
+Makefile.1379012629.24121: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr11-14.pairwise -d 120916 -c 11 -x 14 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012629.24121: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr11-14.pairwise -d 120916 -c 11 -x 14 -s 120916 -l 120916.int.bed
+Makefile.1379012631.9556: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr11-15.pairwise -d 120916 -c 11 -x 15 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012631.9556: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr11-15.pairwise -d 120916 -c 11 -x 15 -s 120916 -l 120916.int.bed
+Makefile.1379012633.27960: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr11-16.pairwise -d 120916 -c 11 -x 16 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012633.27960: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr11-16.pairwise -d 120916 -c 11 -x 16 -s 120916 -l 120916.int.bed
+Makefile.1379012635.4632: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr11-17.pairwise -d 120916 -c 11 -x 17 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012635.4632: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr11-17.pairwise -d 120916 -c 11 -x 17 -s 120916 -l 120916.int.bed
+Makefile.1379012638.1362: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr11-18.pairwise -d 120916 -c 11 -x 18 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012638.1362: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr11-18.pairwise -d 120916 -c 11 -x 18 -s 120916 -l 120916.int.bed
+Makefile.1379012640.30716: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr11-19.pairwise -d 120916 -c 11 -x 19 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012640.30716: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr11-19.pairwise -d 120916 -c 11 -x 19 -s 120916 -l 120916.int.bed
+Makefile.1379012641.14824: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr11-20.pairwise -d 120916 -c 11 -x 20 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012641.14824: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr11-20.pairwise -d 120916 -c 11 -x 20 -s 120916 -l 120916.int.bed
+Makefile.1379012643.29052: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr11-21.pairwise -d 120916 -c 11 -x 21 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012643.29052: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr11-21.pairwise -d 120916 -c 11 -x 21 -s 120916 -l 120916.int.bed
+Makefile.1379012645.549: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr11-22.pairwise -d 120916 -c 11 -x 22 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012645.549: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr11-22.pairwise -d 120916 -c 11 -x 22 -s 120916 -l 120916.int.bed
+Makefile.1379012648.10181: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr12-1.pairwise -d 120916 -c 12 -x 1 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012648.10181: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr12-1.pairwise -d 120916 -c 12 -x 1 -s 120916 -l 120916.int.bed
+Makefile.1379012650.24687: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr12-2.pairwise -d 120916 -c 12 -x 2 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012650.24687: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr12-2.pairwise -d 120916 -c 12 -x 2 -s 120916 -l 120916.int.bed
+Makefile.1379012652.12294: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr12-3.pairwise -d 120916 -c 12 -x 3 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012652.12294: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr12-3.pairwise -d 120916 -c 12 -x 3 -s 120916 -l 120916.int.bed
+Makefile.1379012655.3585: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr12-4.pairwise -d 120916 -c 12 -x 4 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012655.3585: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr12-4.pairwise -d 120916 -c 12 -x 4 -s 120916 -l 120916.int.bed
+Makefile.1379012657.12762: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr12-5.pairwise -d 120916 -c 12 -x 5 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012657.12762: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr12-5.pairwise -d 120916 -c 12 -x 5 -s 120916 -l 120916.int.bed
+Makefile.1379012659.10551: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr12-6.pairwise -d 120916 -c 12 -x 6 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012659.10551: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr12-6.pairwise -d 120916 -c 12 -x 6 -s 120916 -l 120916.int.bed
+Makefile.1379012662.2040: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr12-7.pairwise -d 120916 -c 12 -x 7 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012662.2040: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr12-7.pairwise -d 120916 -c 12 -x 7 -s 120916 -l 120916.int.bed
+Makefile.1379012665.23050: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr12-8.pairwise -d 120916 -c 12 -x 8 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012665.23050: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr12-8.pairwise -d 120916 -c 12 -x 8 -s 120916 -l 120916.int.bed
+Makefile.1379012667.863: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr12-9.pairwise -d 120916 -c 12 -x 9 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012667.863: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr12-9.pairwise -d 120916 -c 12 -x 9 -s 120916 -l 120916.int.bed
+Makefile.1379012669.11357: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr12-10.pairwise -d 120916 -c 12 -x 10 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012669.11357: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr12-10.pairwise -d 120916 -c 12 -x 10 -s 120916 -l 120916.int.bed
+Makefile.1379012671.21539: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr12-11.pairwise -d 120916 -c 12 -x 11 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012671.21539: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr12-11.pairwise -d 120916 -c 12 -x 11 -s 120916 -l 120916.int.bed
+Makefile.1379012673.29928: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr12-12.pairwise -d 120916 -c 12 -x 12 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012673.29928: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr12-12.pairwise -d 120916 -c 12 -x 12 -s 120916 -l 120916.int.bed
+Makefile.1379012675.31139: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr12-13.pairwise -d 120916 -c 12 -x 13 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012675.31139: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr12-13.pairwise -d 120916 -c 12 -x 13 -s 120916 -l 120916.int.bed
+Makefile.1379012678.14702: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr12-14.pairwise -d 120916 -c 12 -x 14 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012678.14702: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr12-14.pairwise -d 120916 -c 12 -x 14 -s 120916 -l 120916.int.bed
+Makefile.1379012680.5150: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr12-15.pairwise -d 120916 -c 12 -x 15 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012680.5150: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr12-15.pairwise -d 120916 -c 12 -x 15 -s 120916 -l 120916.int.bed
+Makefile.1379012682.32517: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr12-16.pairwise -d 120916 -c 12 -x 16 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012682.32517: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr12-16.pairwise -d 120916 -c 12 -x 16 -s 120916 -l 120916.int.bed
+Makefile.1379012684.6264: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr12-17.pairwise -d 120916 -c 12 -x 17 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012684.6264: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr12-17.pairwise -d 120916 -c 12 -x 17 -s 120916 -l 120916.int.bed
+Makefile.1379012687.25385: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr12-18.pairwise -d 120916 -c 12 -x 18 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012687.25385: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr12-18.pairwise -d 120916 -c 12 -x 18 -s 120916 -l 120916.int.bed
+Makefile.1379012689.2122: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr12-19.pairwise -d 120916 -c 12 -x 19 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012689.2122: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr12-19.pairwise -d 120916 -c 12 -x 19 -s 120916 -l 120916.int.bed
+Makefile.1379012692.26926: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr12-20.pairwise -d 120916 -c 12 -x 20 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012692.26926: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr12-20.pairwise -d 120916 -c 12 -x 20 -s 120916 -l 120916.int.bed
+Makefile.1379012694.27866: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr12-21.pairwise -d 120916 -c 12 -x 21 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012694.27866: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr12-21.pairwise -d 120916 -c 12 -x 21 -s 120916 -l 120916.int.bed
+Makefile.1379012696.8754: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr12-22.pairwise -d 120916 -c 12 -x 22 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012696.8754: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr12-22.pairwise -d 120916 -c 12 -x 22 -s 120916 -l 120916.int.bed
+Makefile.1379012698.27511: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr13-1.pairwise -d 120916 -c 13 -x 1 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012698.27511: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr13-1.pairwise -d 120916 -c 13 -x 1 -s 120916 -l 120916.int.bed
+Makefile.1379012701.3222: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr13-2.pairwise -d 120916 -c 13 -x 2 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012701.3222: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr13-2.pairwise -d 120916 -c 13 -x 2 -s 120916 -l 120916.int.bed
+Makefile.1379012703.17465: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr13-3.pairwise -d 120916 -c 13 -x 3 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012703.17465: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr13-3.pairwise -d 120916 -c 13 -x 3 -s 120916 -l 120916.int.bed
+Makefile.1379012705.8919: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr13-4.pairwise -d 120916 -c 13 -x 4 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012705.8919: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr13-4.pairwise -d 120916 -c 13 -x 4 -s 120916 -l 120916.int.bed
+Makefile.1379012707.7236: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr13-5.pairwise -d 120916 -c 13 -x 5 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012707.7236: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr13-5.pairwise -d 120916 -c 13 -x 5 -s 120916 -l 120916.int.bed
+Makefile.1379012709.11544: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr13-6.pairwise -d 120916 -c 13 -x 6 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012709.11544: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr13-6.pairwise -d 120916 -c 13 -x 6 -s 120916 -l 120916.int.bed
+Makefile.1379012712.11966: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr13-7.pairwise -d 120916 -c 13 -x 7 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012712.11966: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr13-7.pairwise -d 120916 -c 13 -x 7 -s 120916 -l 120916.int.bed
+Makefile.1379012713.10983: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr13-8.pairwise -d 120916 -c 13 -x 8 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012713.10983: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr13-8.pairwise -d 120916 -c 13 -x 8 -s 120916 -l 120916.int.bed
+Makefile.1379012716.7528: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr13-9.pairwise -d 120916 -c 13 -x 9 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012716.7528: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr13-9.pairwise -d 120916 -c 13 -x 9 -s 120916 -l 120916.int.bed
+Makefile.1379012718.7219: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr13-10.pairwise -d 120916 -c 13 -x 10 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012718.7219: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr13-10.pairwise -d 120916 -c 13 -x 10 -s 120916 -l 120916.int.bed
+Makefile.1379012720.10247: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr13-11.pairwise -d 120916 -c 13 -x 11 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012720.10247: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr13-11.pairwise -d 120916 -c 13 -x 11 -s 120916 -l 120916.int.bed
+Makefile.1379012722.8788: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr13-12.pairwise -d 120916 -c 13 -x 12 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012722.8788: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr13-12.pairwise -d 120916 -c 13 -x 12 -s 120916 -l 120916.int.bed
+Makefile.1379012725.27886: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr13-13.pairwise -d 120916 -c 13 -x 13 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012725.27886: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr13-13.pairwise -d 120916 -c 13 -x 13 -s 120916 -l 120916.int.bed
+Makefile.1379012727.17228: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr13-14.pairwise -d 120916 -c 13 -x 14 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012727.17228: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr13-14.pairwise -d 120916 -c 13 -x 14 -s 120916 -l 120916.int.bed
+Makefile.1379012730.24975: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr13-15.pairwise -d 120916 -c 13 -x 15 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012730.24975: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr13-15.pairwise -d 120916 -c 13 -x 15 -s 120916 -l 120916.int.bed
+Makefile.1379012732.11705: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr13-16.pairwise -d 120916 -c 13 -x 16 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012732.11705: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr13-16.pairwise -d 120916 -c 13 -x 16 -s 120916 -l 120916.int.bed
+Makefile.1379012734.18656: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr13-17.pairwise -d 120916 -c 13 -x 17 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012734.18656: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr13-17.pairwise -d 120916 -c 13 -x 17 -s 120916 -l 120916.int.bed
+Makefile.1379012735.26415: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr13-18.pairwise -d 120916 -c 13 -x 18 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012735.26415: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr13-18.pairwise -d 120916 -c 13 -x 18 -s 120916 -l 120916.int.bed
+Makefile.1379012738.22128: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr13-19.pairwise -d 120916 -c 13 -x 19 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012738.22128: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr13-19.pairwise -d 120916 -c 13 -x 19 -s 120916 -l 120916.int.bed
+Makefile.1379012739.9180: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr13-20.pairwise -d 120916 -c 13 -x 20 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012739.9180: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr13-20.pairwise -d 120916 -c 13 -x 20 -s 120916 -l 120916.int.bed
+Makefile.1379012741.26387: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr13-21.pairwise -d 120916 -c 13 -x 21 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012741.26387: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr13-21.pairwise -d 120916 -c 13 -x 21 -s 120916 -l 120916.int.bed
+Makefile.1379012744.28666: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr13-22.pairwise -d 120916 -c 13 -x 22 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012744.28666: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr13-22.pairwise -d 120916 -c 13 -x 22 -s 120916 -l 120916.int.bed
+Makefile.1379012746.12382: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr14-1.pairwise -d 120916 -c 14 -x 1 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012746.12382: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr14-1.pairwise -d 120916 -c 14 -x 1 -s 120916 -l 120916.int.bed
+Makefile.1379012749.15931: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr14-2.pairwise -d 120916 -c 14 -x 2 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012749.15931: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr14-2.pairwise -d 120916 -c 14 -x 2 -s 120916 -l 120916.int.bed
+Makefile.1379012751.29832: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr14-3.pairwise -d 120916 -c 14 -x 3 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012751.29832: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr14-3.pairwise -d 120916 -c 14 -x 3 -s 120916 -l 120916.int.bed
+Makefile.1379012753.332: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr14-4.pairwise -d 120916 -c 14 -x 4 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012753.332: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr14-4.pairwise -d 120916 -c 14 -x 4 -s 120916 -l 120916.int.bed
+Makefile.1379012756.5595: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr14-5.pairwise -d 120916 -c 14 -x 5 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012756.5595: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr14-5.pairwise -d 120916 -c 14 -x 5 -s 120916 -l 120916.int.bed
+Makefile.1379012758.14958: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr14-6.pairwise -d 120916 -c 14 -x 6 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012758.14958: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr14-6.pairwise -d 120916 -c 14 -x 6 -s 120916 -l 120916.int.bed
+Makefile.1379012763.29759: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr14-7.pairwise -d 120916 -c 14 -x 7 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012763.29759: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr14-7.pairwise -d 120916 -c 14 -x 7 -s 120916 -l 120916.int.bed
+Makefile.1379012765.4947: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr14-8.pairwise -d 120916 -c 14 -x 8 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012765.4947: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr14-8.pairwise -d 120916 -c 14 -x 8 -s 120916 -l 120916.int.bed
+Makefile.1379012768.1232: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr14-9.pairwise -d 120916 -c 14 -x 9 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012768.1232: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr14-9.pairwise -d 120916 -c 14 -x 9 -s 120916 -l 120916.int.bed
+Makefile.1379012771.8736: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr14-10.pairwise -d 120916 -c 14 -x 10 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012771.8736: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr14-10.pairwise -d 120916 -c 14 -x 10 -s 120916 -l 120916.int.bed
+Makefile.1379012773.375: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr14-11.pairwise -d 120916 -c 14 -x 11 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012773.375: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr14-11.pairwise -d 120916 -c 14 -x 11 -s 120916 -l 120916.int.bed
+Makefile.1379012775.6976: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr14-12.pairwise -d 120916 -c 14 -x 12 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012775.6976: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr14-12.pairwise -d 120916 -c 14 -x 12 -s 120916 -l 120916.int.bed
+Makefile.1379012778.19643: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr14-13.pairwise -d 120916 -c 14 -x 13 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012778.19643: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr14-13.pairwise -d 120916 -c 14 -x 13 -s 120916 -l 120916.int.bed
+Makefile.1379012780.7960: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr14-14.pairwise -d 120916 -c 14 -x 14 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012780.7960: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr14-14.pairwise -d 120916 -c 14 -x 14 -s 120916 -l 120916.int.bed
+Makefile.1379012782.30060: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr14-15.pairwise -d 120916 -c 14 -x 15 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012782.30060: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr14-15.pairwise -d 120916 -c 14 -x 15 -s 120916 -l 120916.int.bed
+Makefile.1379012785.21441: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr14-16.pairwise -d 120916 -c 14 -x 16 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012785.21441: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr14-16.pairwise -d 120916 -c 14 -x 16 -s 120916 -l 120916.int.bed
+Makefile.1379012787.3269: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr14-17.pairwise -d 120916 -c 14 -x 17 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012787.3269: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr14-17.pairwise -d 120916 -c 14 -x 17 -s 120916 -l 120916.int.bed
+Makefile.1379012789.25093: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr14-18.pairwise -d 120916 -c 14 -x 18 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012789.25093: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr14-18.pairwise -d 120916 -c 14 -x 18 -s 120916 -l 120916.int.bed
+Makefile.1379012792.7669: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr14-19.pairwise -d 120916 -c 14 -x 19 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012792.7669: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr14-19.pairwise -d 120916 -c 14 -x 19 -s 120916 -l 120916.int.bed
+Makefile.1379012794.3926: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr14-20.pairwise -d 120916 -c 14 -x 20 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012794.3926: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr14-20.pairwise -d 120916 -c 14 -x 20 -s 120916 -l 120916.int.bed
+Makefile.1379012796.14455: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr14-21.pairwise -d 120916 -c 14 -x 21 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012796.14455: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr14-21.pairwise -d 120916 -c 14 -x 21 -s 120916 -l 120916.int.bed
+Makefile.1379012798.11795: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr14-22.pairwise -d 120916 -c 14 -x 22 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012798.11795: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr14-22.pairwise -d 120916 -c 14 -x 22 -s 120916 -l 120916.int.bed
+Makefile.1379012800.27009: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr15-1.pairwise -d 120916 -c 15 -x 1 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012800.27009: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr15-1.pairwise -d 120916 -c 15 -x 1 -s 120916 -l 120916.int.bed
+Makefile.1379012803.6549: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr15-2.pairwise -d 120916 -c 15 -x 2 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012803.6549: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr15-2.pairwise -d 120916 -c 15 -x 2 -s 120916 -l 120916.int.bed
+Makefile.1379012805.28831: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr15-3.pairwise -d 120916 -c 15 -x 3 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012805.28831: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr15-3.pairwise -d 120916 -c 15 -x 3 -s 120916 -l 120916.int.bed
+Makefile.1379012807.13747: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr15-4.pairwise -d 120916 -c 15 -x 4 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012807.13747: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr15-4.pairwise -d 120916 -c 15 -x 4 -s 120916 -l 120916.int.bed
+Makefile.1379012809.21468: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr15-5.pairwise -d 120916 -c 15 -x 5 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012809.21468: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr15-5.pairwise -d 120916 -c 15 -x 5 -s 120916 -l 120916.int.bed
+Makefile.1379012811.3701: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr15-6.pairwise -d 120916 -c 15 -x 6 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012811.3701: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr15-6.pairwise -d 120916 -c 15 -x 6 -s 120916 -l 120916.int.bed
+Makefile.1379012813.22911: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr15-7.pairwise -d 120916 -c 15 -x 7 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012813.22911: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr15-7.pairwise -d 120916 -c 15 -x 7 -s 120916 -l 120916.int.bed
+Makefile.1379012814.635: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr15-8.pairwise -d 120916 -c 15 -x 8 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012814.635: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr15-8.pairwise -d 120916 -c 15 -x 8 -s 120916 -l 120916.int.bed
+Makefile.1379012816.31596: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr15-9.pairwise -d 120916 -c 15 -x 9 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012816.31596: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr15-9.pairwise -d 120916 -c 15 -x 9 -s 120916 -l 120916.int.bed
+Makefile.1379012819.12144: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr15-10.pairwise -d 120916 -c 15 -x 10 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012819.12144: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr15-10.pairwise -d 120916 -c 15 -x 10 -s 120916 -l 120916.int.bed
+Makefile.1379012821.7169: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr15-11.pairwise -d 120916 -c 15 -x 11 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012821.7169: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr15-11.pairwise -d 120916 -c 15 -x 11 -s 120916 -l 120916.int.bed
+Makefile.1379012824.21372: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr15-12.pairwise -d 120916 -c 15 -x 12 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012824.21372: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr15-12.pairwise -d 120916 -c 15 -x 12 -s 120916 -l 120916.int.bed
+Makefile.1379012825.17255: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr15-13.pairwise -d 120916 -c 15 -x 13 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012825.17255: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr15-13.pairwise -d 120916 -c 15 -x 13 -s 120916 -l 120916.int.bed
+Makefile.1379012827.31235: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr15-14.pairwise -d 120916 -c 15 -x 14 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012827.31235: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr15-14.pairwise -d 120916 -c 15 -x 14 -s 120916 -l 120916.int.bed
+Makefile.1379012829.26357: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr15-15.pairwise -d 120916 -c 15 -x 15 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012829.26357: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr15-15.pairwise -d 120916 -c 15 -x 15 -s 120916 -l 120916.int.bed
+Makefile.1379012830.1229: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr15-16.pairwise -d 120916 -c 15 -x 16 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012830.1229: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr15-16.pairwise -d 120916 -c 15 -x 16 -s 120916 -l 120916.int.bed
+Makefile.1379012832.13180: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr15-17.pairwise -d 120916 -c 15 -x 17 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012832.13180: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr15-17.pairwise -d 120916 -c 15 -x 17 -s 120916 -l 120916.int.bed
+Makefile.1379012835.6118: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr15-18.pairwise -d 120916 -c 15 -x 18 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012835.6118: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr15-18.pairwise -d 120916 -c 15 -x 18 -s 120916 -l 120916.int.bed
+Makefile.1379012836.24329: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr15-19.pairwise -d 120916 -c 15 -x 19 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012836.24329: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr15-19.pairwise -d 120916 -c 15 -x 19 -s 120916 -l 120916.int.bed
+Makefile.1379012839.10192: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr15-20.pairwise -d 120916 -c 15 -x 20 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012839.10192: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr15-20.pairwise -d 120916 -c 15 -x 20 -s 120916 -l 120916.int.bed
+Makefile.1379012841.15302: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr15-21.pairwise -d 120916 -c 15 -x 21 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012841.15302: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr15-21.pairwise -d 120916 -c 15 -x 21 -s 120916 -l 120916.int.bed
+Makefile.1379012843.29833: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr15-22.pairwise -d 120916 -c 15 -x 22 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012843.29833: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr15-22.pairwise -d 120916 -c 15 -x 22 -s 120916 -l 120916.int.bed
+Makefile.1379012846.19676: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr16-1.pairwise -d 120916 -c 16 -x 1 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012846.19676: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr16-1.pairwise -d 120916 -c 16 -x 1 -s 120916 -l 120916.int.bed
+Makefile.1379012848.29334: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr16-2.pairwise -d 120916 -c 16 -x 2 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012848.29334: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr16-2.pairwise -d 120916 -c 16 -x 2 -s 120916 -l 120916.int.bed
+Makefile.1379012850.18931: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr16-3.pairwise -d 120916 -c 16 -x 3 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012850.18931: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr16-3.pairwise -d 120916 -c 16 -x 3 -s 120916 -l 120916.int.bed
+Makefile.1379012853.9955: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr16-4.pairwise -d 120916 -c 16 -x 4 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012853.9955: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr16-4.pairwise -d 120916 -c 16 -x 4 -s 120916 -l 120916.int.bed
+Makefile.1379012855.17955: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr16-5.pairwise -d 120916 -c 16 -x 5 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012855.17955: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr16-5.pairwise -d 120916 -c 16 -x 5 -s 120916 -l 120916.int.bed
+Makefile.1379012857.32284: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr16-6.pairwise -d 120916 -c 16 -x 6 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012857.32284: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr16-6.pairwise -d 120916 -c 16 -x 6 -s 120916 -l 120916.int.bed
+Makefile.1379012858.30663: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr16-7.pairwise -d 120916 -c 16 -x 7 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012858.30663: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr16-7.pairwise -d 120916 -c 16 -x 7 -s 120916 -l 120916.int.bed
+Makefile.1379012860.8028: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr16-8.pairwise -d 120916 -c 16 -x 8 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012860.8028: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr16-8.pairwise -d 120916 -c 16 -x 8 -s 120916 -l 120916.int.bed
+Makefile.1379012862.11005: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr16-9.pairwise -d 120916 -c 16 -x 9 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012862.11005: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr16-9.pairwise -d 120916 -c 16 -x 9 -s 120916 -l 120916.int.bed
+Makefile.1379012863.12574: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr16-10.pairwise -d 120916 -c 16 -x 10 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012863.12574: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr16-10.pairwise -d 120916 -c 16 -x 10 -s 120916 -l 120916.int.bed
+Makefile.1379012866.4809: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr16-11.pairwise -d 120916 -c 16 -x 11 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012866.4809: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr16-11.pairwise -d 120916 -c 16 -x 11 -s 120916 -l 120916.int.bed
+Makefile.1379012868.15914: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr16-12.pairwise -d 120916 -c 16 -x 12 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012868.15914: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr16-12.pairwise -d 120916 -c 16 -x 12 -s 120916 -l 120916.int.bed
+Makefile.1379012870.23120: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr16-13.pairwise -d 120916 -c 16 -x 13 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012870.23120: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr16-13.pairwise -d 120916 -c 16 -x 13 -s 120916 -l 120916.int.bed
+Makefile.1379012873.26006: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr16-14.pairwise -d 120916 -c 16 -x 14 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012873.26006: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr16-14.pairwise -d 120916 -c 16 -x 14 -s 120916 -l 120916.int.bed
+Makefile.1379012875.15526: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr16-15.pairwise -d 120916 -c 16 -x 15 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012875.15526: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr16-15.pairwise -d 120916 -c 16 -x 15 -s 120916 -l 120916.int.bed
+Makefile.1379012877.23835: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr16-16.pairwise -d 120916 -c 16 -x 16 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012877.23835: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr16-16.pairwise -d 120916 -c 16 -x 16 -s 120916 -l 120916.int.bed
+Makefile.1379012881.10051: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr16-17.pairwise -d 120916 -c 16 -x 17 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012881.10051: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr16-17.pairwise -d 120916 -c 16 -x 17 -s 120916 -l 120916.int.bed
+Makefile.1379012883.8317: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr16-18.pairwise -d 120916 -c 16 -x 18 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012883.8317: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr16-18.pairwise -d 120916 -c 16 -x 18 -s 120916 -l 120916.int.bed
+Makefile.1379012885.14729: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr16-19.pairwise -d 120916 -c 16 -x 19 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012885.14729: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr16-19.pairwise -d 120916 -c 16 -x 19 -s 120916 -l 120916.int.bed
+Makefile.1379012887.14229: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr16-20.pairwise -d 120916 -c 16 -x 20 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012887.14229: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr16-20.pairwise -d 120916 -c 16 -x 20 -s 120916 -l 120916.int.bed
+Makefile.1379012890.18182: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr16-21.pairwise -d 120916 -c 16 -x 21 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012890.18182: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr16-21.pairwise -d 120916 -c 16 -x 21 -s 120916 -l 120916.int.bed
+Makefile.1379012892.17863: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr16-22.pairwise -d 120916 -c 16 -x 22 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012892.17863: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr16-22.pairwise -d 120916 -c 16 -x 22 -s 120916 -l 120916.int.bed
+Makefile.1379012894.30855: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr17-1.pairwise -d 120916 -c 17 -x 1 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012894.30855: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr17-1.pairwise -d 120916 -c 17 -x 1 -s 120916 -l 120916.int.bed
+Makefile.1379012896.8762: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr17-2.pairwise -d 120916 -c 17 -x 2 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012896.8762: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr17-2.pairwise -d 120916 -c 17 -x 2 -s 120916 -l 120916.int.bed
+Makefile.1379012899.12539: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr17-3.pairwise -d 120916 -c 17 -x 3 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012899.12539: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr17-3.pairwise -d 120916 -c 17 -x 3 -s 120916 -l 120916.int.bed
+Makefile.1379012901.29834: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr17-4.pairwise -d 120916 -c 17 -x 4 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012901.29834: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr17-4.pairwise -d 120916 -c 17 -x 4 -s 120916 -l 120916.int.bed
+Makefile.1379012903.18085: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr17-5.pairwise -d 120916 -c 17 -x 5 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012903.18085: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr17-5.pairwise -d 120916 -c 17 -x 5 -s 120916 -l 120916.int.bed
+Makefile.1379012906.17719: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr17-6.pairwise -d 120916 -c 17 -x 6 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012906.17719: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr17-6.pairwise -d 120916 -c 17 -x 6 -s 120916 -l 120916.int.bed
+Makefile.1379012908.18727: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr17-7.pairwise -d 120916 -c 17 -x 7 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012908.18727: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr17-7.pairwise -d 120916 -c 17 -x 7 -s 120916 -l 120916.int.bed
+Makefile.1379012910.7434: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr17-8.pairwise -d 120916 -c 17 -x 8 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012910.7434: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr17-8.pairwise -d 120916 -c 17 -x 8 -s 120916 -l 120916.int.bed
+Makefile.1379012912.16875: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr17-9.pairwise -d 120916 -c 17 -x 9 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012912.16875: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr17-9.pairwise -d 120916 -c 17 -x 9 -s 120916 -l 120916.int.bed
+Makefile.1379012915.22261: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr17-10.pairwise -d 120916 -c 17 -x 10 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012915.22261: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr17-10.pairwise -d 120916 -c 17 -x 10 -s 120916 -l 120916.int.bed
+Makefile.1379012917.3492: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr17-11.pairwise -d 120916 -c 17 -x 11 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012917.3492: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr17-11.pairwise -d 120916 -c 17 -x 11 -s 120916 -l 120916.int.bed
+Makefile.1379012919.14703: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr17-12.pairwise -d 120916 -c 17 -x 12 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012919.14703: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr17-12.pairwise -d 120916 -c 17 -x 12 -s 120916 -l 120916.int.bed
+Makefile.1379012922.4121: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr17-13.pairwise -d 120916 -c 17 -x 13 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012922.4121: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr17-13.pairwise -d 120916 -c 17 -x 13 -s 120916 -l 120916.int.bed
+Makefile.1379012923.16480: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr17-14.pairwise -d 120916 -c 17 -x 14 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012923.16480: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr17-14.pairwise -d 120916 -c 17 -x 14 -s 120916 -l 120916.int.bed
+Makefile.1379012926.30298: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr17-15.pairwise -d 120916 -c 17 -x 15 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012926.30298: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr17-15.pairwise -d 120916 -c 17 -x 15 -s 120916 -l 120916.int.bed
+Makefile.1379012928.25913: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr17-16.pairwise -d 120916 -c 17 -x 16 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012928.25913: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr17-16.pairwise -d 120916 -c 17 -x 16 -s 120916 -l 120916.int.bed
+Makefile.1379012930.1595: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr17-17.pairwise -d 120916 -c 17 -x 17 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012930.1595: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr17-17.pairwise -d 120916 -c 17 -x 17 -s 120916 -l 120916.int.bed
+Makefile.1379012932.28502: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr17-18.pairwise -d 120916 -c 17 -x 18 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012932.28502: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr17-18.pairwise -d 120916 -c 17 -x 18 -s 120916 -l 120916.int.bed
+Makefile.1379012934.11548: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr17-19.pairwise -d 120916 -c 17 -x 19 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012934.11548: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr17-19.pairwise -d 120916 -c 17 -x 19 -s 120916 -l 120916.int.bed
+Makefile.1379012936.14673: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr17-20.pairwise -d 120916 -c 17 -x 20 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012936.14673: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr17-20.pairwise -d 120916 -c 17 -x 20 -s 120916 -l 120916.int.bed
+Makefile.1379012937.5089: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr17-21.pairwise -d 120916 -c 17 -x 21 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012937.5089: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr17-21.pairwise -d 120916 -c 17 -x 21 -s 120916 -l 120916.int.bed
+Makefile.1379012939.9635: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr17-22.pairwise -d 120916 -c 17 -x 22 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012939.9635: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr17-22.pairwise -d 120916 -c 17 -x 22 -s 120916 -l 120916.int.bed
+Makefile.1379012941.26311: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr18-1.pairwise -d 120916 -c 18 -x 1 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012941.26311: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr18-1.pairwise -d 120916 -c 18 -x 1 -s 120916 -l 120916.int.bed
+Makefile.1379012944.29620: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr18-2.pairwise -d 120916 -c 18 -x 2 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012944.29620: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr18-2.pairwise -d 120916 -c 18 -x 2 -s 120916 -l 120916.int.bed
+Makefile.1379012946.8330: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr18-3.pairwise -d 120916 -c 18 -x 3 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012946.8330: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr18-3.pairwise -d 120916 -c 18 -x 3 -s 120916 -l 120916.int.bed
+Makefile.1379012948.1195: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr18-4.pairwise -d 120916 -c 18 -x 4 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012948.1195: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr18-4.pairwise -d 120916 -c 18 -x 4 -s 120916 -l 120916.int.bed
+Makefile.1379012950.9978: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr18-5.pairwise -d 120916 -c 18 -x 5 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012950.9978: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr18-5.pairwise -d 120916 -c 18 -x 5 -s 120916 -l 120916.int.bed
+Makefile.1379012953.14807: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr18-6.pairwise -d 120916 -c 18 -x 6 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012953.14807: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr18-6.pairwise -d 120916 -c 18 -x 6 -s 120916 -l 120916.int.bed
+Makefile.1379012955.26857: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr18-7.pairwise -d 120916 -c 18 -x 7 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012955.26857: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr18-7.pairwise -d 120916 -c 18 -x 7 -s 120916 -l 120916.int.bed
+Makefile.1379012957.12783: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr18-8.pairwise -d 120916 -c 18 -x 8 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012957.12783: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr18-8.pairwise -d 120916 -c 18 -x 8 -s 120916 -l 120916.int.bed
+Makefile.1379012959.24620: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr18-9.pairwise -d 120916 -c 18 -x 9 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012959.24620: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr18-9.pairwise -d 120916 -c 18 -x 9 -s 120916 -l 120916.int.bed
+Makefile.1379012961.29133: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr18-10.pairwise -d 120916 -c 18 -x 10 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012961.29133: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr18-10.pairwise -d 120916 -c 18 -x 10 -s 120916 -l 120916.int.bed
+Makefile.1379012964.26259: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr18-11.pairwise -d 120916 -c 18 -x 11 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012964.26259: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr18-11.pairwise -d 120916 -c 18 -x 11 -s 120916 -l 120916.int.bed
+Makefile.1379012967.18594: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr18-12.pairwise -d 120916 -c 18 -x 12 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012967.18594: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr18-12.pairwise -d 120916 -c 18 -x 12 -s 120916 -l 120916.int.bed
+Makefile.1379012969.26242: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr18-13.pairwise -d 120916 -c 18 -x 13 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012969.26242: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr18-13.pairwise -d 120916 -c 18 -x 13 -s 120916 -l 120916.int.bed
+Makefile.1379012971.23412: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr18-14.pairwise -d 120916 -c 18 -x 14 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012971.23412: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr18-14.pairwise -d 120916 -c 18 -x 14 -s 120916 -l 120916.int.bed
+Makefile.1379012973.4546: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr18-15.pairwise -d 120916 -c 18 -x 15 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012973.4546: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr18-15.pairwise -d 120916 -c 18 -x 15 -s 120916 -l 120916.int.bed
+Makefile.1379012976.32039: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr18-16.pairwise -d 120916 -c 18 -x 16 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012976.32039: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr18-16.pairwise -d 120916 -c 18 -x 16 -s 120916 -l 120916.int.bed
+Makefile.1379012978.4558: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr18-17.pairwise -d 120916 -c 18 -x 17 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012978.4558: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr18-17.pairwise -d 120916 -c 18 -x 17 -s 120916 -l 120916.int.bed
+Makefile.1379012980.8945: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr18-18.pairwise -d 120916 -c 18 -x 18 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012980.8945: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr18-18.pairwise -d 120916 -c 18 -x 18 -s 120916 -l 120916.int.bed
+Makefile.1379012982.17212: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr18-19.pairwise -d 120916 -c 18 -x 19 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012982.17212: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr18-19.pairwise -d 120916 -c 18 -x 19 -s 120916 -l 120916.int.bed
+Makefile.1379012984.31566: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr18-20.pairwise -d 120916 -c 18 -x 20 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012984.31566: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr18-20.pairwise -d 120916 -c 18 -x 20 -s 120916 -l 120916.int.bed
+Makefile.1379012987.655: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr18-21.pairwise -d 120916 -c 18 -x 21 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012987.655: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr18-21.pairwise -d 120916 -c 18 -x 21 -s 120916 -l 120916.int.bed
+Makefile.1379012989.487: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr18-22.pairwise -d 120916 -c 18 -x 22 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012989.487: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr18-22.pairwise -d 120916 -c 18 -x 22 -s 120916 -l 120916.int.bed
+Makefile.1379012992.30401: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr19-1.pairwise -d 120916 -c 19 -x 1 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012992.30401: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr19-1.pairwise -d 120916 -c 19 -x 1 -s 120916 -l 120916.int.bed
+Makefile.1379012994.15850: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr19-2.pairwise -d 120916 -c 19 -x 2 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012994.15850: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr19-2.pairwise -d 120916 -c 19 -x 2 -s 120916 -l 120916.int.bed
+Makefile.1379012996.22292: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr19-3.pairwise -d 120916 -c 19 -x 3 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012996.22292: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr19-3.pairwise -d 120916 -c 19 -x 3 -s 120916 -l 120916.int.bed
+Makefile.1379012999.3450: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr19-4.pairwise -d 120916 -c 19 -x 4 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379012999.3450: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr19-4.pairwise -d 120916 -c 19 -x 4 -s 120916 -l 120916.int.bed
+Makefile.1379013001.6853: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr19-5.pairwise -d 120916 -c 19 -x 5 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013001.6853: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr19-5.pairwise -d 120916 -c 19 -x 5 -s 120916 -l 120916.int.bed
+Makefile.1379013003.30919: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr19-6.pairwise -d 120916 -c 19 -x 6 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013003.30919: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr19-6.pairwise -d 120916 -c 19 -x 6 -s 120916 -l 120916.int.bed
+Makefile.1379013005.17961: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr19-7.pairwise -d 120916 -c 19 -x 7 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013005.17961: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr19-7.pairwise -d 120916 -c 19 -x 7 -s 120916 -l 120916.int.bed
+Makefile.1379013007.29526: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr19-8.pairwise -d 120916 -c 19 -x 8 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013007.29526: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr19-8.pairwise -d 120916 -c 19 -x 8 -s 120916 -l 120916.int.bed
+Makefile.1379013009.5187: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr19-9.pairwise -d 120916 -c 19 -x 9 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013009.5187: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr19-9.pairwise -d 120916 -c 19 -x 9 -s 120916 -l 120916.int.bed
+Makefile.1379013011.405: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr19-10.pairwise -d 120916 -c 19 -x 10 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013011.405: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr19-10.pairwise -d 120916 -c 19 -x 10 -s 120916 -l 120916.int.bed
+Makefile.1379013013.13847: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr19-11.pairwise -d 120916 -c 19 -x 11 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013013.13847: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr19-11.pairwise -d 120916 -c 19 -x 11 -s 120916 -l 120916.int.bed
+Makefile.1379013015.5451: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr19-12.pairwise -d 120916 -c 19 -x 12 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013015.5451: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr19-12.pairwise -d 120916 -c 19 -x 12 -s 120916 -l 120916.int.bed
+Makefile.1379013017.22127: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr19-13.pairwise -d 120916 -c 19 -x 13 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013017.22127: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr19-13.pairwise -d 120916 -c 19 -x 13 -s 120916 -l 120916.int.bed
+Makefile.1379013020.3819: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr19-14.pairwise -d 120916 -c 19 -x 14 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013020.3819: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr19-14.pairwise -d 120916 -c 19 -x 14 -s 120916 -l 120916.int.bed
+Makefile.1379013022.4921: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr19-15.pairwise -d 120916 -c 19 -x 15 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013022.4921: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr19-15.pairwise -d 120916 -c 19 -x 15 -s 120916 -l 120916.int.bed
+Makefile.1379013024.10385: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr19-16.pairwise -d 120916 -c 19 -x 16 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013024.10385: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr19-16.pairwise -d 120916 -c 19 -x 16 -s 120916 -l 120916.int.bed
+Makefile.1379013026.17529: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr19-17.pairwise -d 120916 -c 19 -x 17 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013026.17529: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr19-17.pairwise -d 120916 -c 19 -x 17 -s 120916 -l 120916.int.bed
+Makefile.1379013028.16371: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr19-18.pairwise -d 120916 -c 19 -x 18 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013028.16371: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr19-18.pairwise -d 120916 -c 19 -x 18 -s 120916 -l 120916.int.bed
+Makefile.1379013030.8012: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr19-19.pairwise -d 120916 -c 19 -x 19 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013030.8012: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr19-19.pairwise -d 120916 -c 19 -x 19 -s 120916 -l 120916.int.bed
+Makefile.1379013032.24536: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr19-20.pairwise -d 120916 -c 19 -x 20 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013032.24536: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr19-20.pairwise -d 120916 -c 19 -x 20 -s 120916 -l 120916.int.bed
+Makefile.1379013035.28889: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr19-21.pairwise -d 120916 -c 19 -x 21 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013035.28889: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr19-21.pairwise -d 120916 -c 19 -x 21 -s 120916 -l 120916.int.bed
+Makefile.1379013037.22973: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr19-22.pairwise -d 120916 -c 19 -x 22 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013037.22973: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr19-22.pairwise -d 120916 -c 19 -x 22 -s 120916 -l 120916.int.bed
+Makefile.1379013040.3599: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr20-1.pairwise -d 120916 -c 20 -x 1 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013040.3599: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr20-1.pairwise -d 120916 -c 20 -x 1 -s 120916 -l 120916.int.bed
+Makefile.1379013043.28966: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr20-2.pairwise -d 120916 -c 20 -x 2 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013043.28966: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr20-2.pairwise -d 120916 -c 20 -x 2 -s 120916 -l 120916.int.bed
+Makefile.1379013045.10833: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr20-3.pairwise -d 120916 -c 20 -x 3 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013045.10833: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr20-3.pairwise -d 120916 -c 20 -x 3 -s 120916 -l 120916.int.bed
+Makefile.1379013048.13502: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr20-4.pairwise -d 120916 -c 20 -x 4 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013048.13502: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr20-4.pairwise -d 120916 -c 20 -x 4 -s 120916 -l 120916.int.bed
+Makefile.1379013050.31685: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr20-5.pairwise -d 120916 -c 20 -x 5 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013050.31685: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr20-5.pairwise -d 120916 -c 20 -x 5 -s 120916 -l 120916.int.bed
+Makefile.1379013052.5544: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr20-6.pairwise -d 120916 -c 20 -x 6 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013052.5544: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr20-6.pairwise -d 120916 -c 20 -x 6 -s 120916 -l 120916.int.bed
+Makefile.1379013055.20771: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr20-7.pairwise -d 120916 -c 20 -x 7 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013055.20771: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr20-7.pairwise -d 120916 -c 20 -x 7 -s 120916 -l 120916.int.bed
+Makefile.1379013057.3633: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr20-8.pairwise -d 120916 -c 20 -x 8 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013057.3633: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr20-8.pairwise -d 120916 -c 20 -x 8 -s 120916 -l 120916.int.bed
+Makefile.1379013059.22745: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr20-9.pairwise -d 120916 -c 20 -x 9 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013059.22745: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr20-9.pairwise -d 120916 -c 20 -x 9 -s 120916 -l 120916.int.bed
+Makefile.1379013061.25449: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr20-10.pairwise -d 120916 -c 20 -x 10 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013061.25449: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr20-10.pairwise -d 120916 -c 20 -x 10 -s 120916 -l 120916.int.bed
+Makefile.1379013063.29323: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr20-11.pairwise -d 120916 -c 20 -x 11 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013063.29323: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr20-11.pairwise -d 120916 -c 20 -x 11 -s 120916 -l 120916.int.bed
+Makefile.1379013066.6372: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr20-12.pairwise -d 120916 -c 20 -x 12 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013066.6372: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr20-12.pairwise -d 120916 -c 20 -x 12 -s 120916 -l 120916.int.bed
+Makefile.1379013067.20310: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr20-13.pairwise -d 120916 -c 20 -x 13 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013067.20310: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr20-13.pairwise -d 120916 -c 20 -x 13 -s 120916 -l 120916.int.bed
+Makefile.1379013069.28635: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr20-14.pairwise -d 120916 -c 20 -x 14 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013069.28635: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr20-14.pairwise -d 120916 -c 20 -x 14 -s 120916 -l 120916.int.bed
+Makefile.1379013071.18624: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr20-15.pairwise -d 120916 -c 20 -x 15 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013071.18624: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr20-15.pairwise -d 120916 -c 20 -x 15 -s 120916 -l 120916.int.bed
+Makefile.1379013073.18348: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr20-16.pairwise -d 120916 -c 20 -x 16 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013073.18348: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr20-16.pairwise -d 120916 -c 20 -x 16 -s 120916 -l 120916.int.bed
+Makefile.1379013075.17565: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr20-17.pairwise -d 120916 -c 20 -x 17 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013075.17565: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr20-17.pairwise -d 120916 -c 20 -x 17 -s 120916 -l 120916.int.bed
+Makefile.1379013077.20261: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr20-18.pairwise -d 120916 -c 20 -x 18 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013077.20261: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr20-18.pairwise -d 120916 -c 20 -x 18 -s 120916 -l 120916.int.bed
+Makefile.1379013079.22069: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr20-19.pairwise -d 120916 -c 20 -x 19 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013079.22069: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr20-19.pairwise -d 120916 -c 20 -x 19 -s 120916 -l 120916.int.bed
+Makefile.1379013082.8093: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr20-20.pairwise -d 120916 -c 20 -x 20 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013082.8093: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr20-20.pairwise -d 120916 -c 20 -x 20 -s 120916 -l 120916.int.bed
+Makefile.1379013083.4237: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr20-21.pairwise -d 120916 -c 20 -x 21 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013083.4237: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr20-21.pairwise -d 120916 -c 20 -x 21 -s 120916 -l 120916.int.bed
+Makefile.1379013085.21606: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr20-22.pairwise -d 120916 -c 20 -x 22 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013085.21606: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr20-22.pairwise -d 120916 -c 20 -x 22 -s 120916 -l 120916.int.bed
+Makefile.1379013087.16804: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr21-1.pairwise -d 120916 -c 21 -x 1 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013087.16804: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr21-1.pairwise -d 120916 -c 21 -x 1 -s 120916 -l 120916.int.bed
+Makefile.1379013089.20658: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr21-2.pairwise -d 120916 -c 21 -x 2 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013089.20658: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr21-2.pairwise -d 120916 -c 21 -x 2 -s 120916 -l 120916.int.bed
+Makefile.1379013091.26224: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr21-3.pairwise -d 120916 -c 21 -x 3 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013091.26224: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr21-3.pairwise -d 120916 -c 21 -x 3 -s 120916 -l 120916.int.bed
+Makefile.1379013094.27708: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr21-4.pairwise -d 120916 -c 21 -x 4 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013094.27708: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr21-4.pairwise -d 120916 -c 21 -x 4 -s 120916 -l 120916.int.bed
+Makefile.1379013096.12351: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr21-5.pairwise -d 120916 -c 21 -x 5 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013096.12351: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr21-5.pairwise -d 120916 -c 21 -x 5 -s 120916 -l 120916.int.bed
+Makefile.1379013097.13958: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr21-6.pairwise -d 120916 -c 21 -x 6 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013097.13958: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr21-6.pairwise -d 120916 -c 21 -x 6 -s 120916 -l 120916.int.bed
+Makefile.1379013100.19040: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr21-7.pairwise -d 120916 -c 21 -x 7 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013100.19040: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr21-7.pairwise -d 120916 -c 21 -x 7 -s 120916 -l 120916.int.bed
+Makefile.1379013102.18681: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr21-8.pairwise -d 120916 -c 21 -x 8 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013102.18681: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr21-8.pairwise -d 120916 -c 21 -x 8 -s 120916 -l 120916.int.bed
+Makefile.1379013105.32051: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr21-9.pairwise -d 120916 -c 21 -x 9 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013105.32051: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr21-9.pairwise -d 120916 -c 21 -x 9 -s 120916 -l 120916.int.bed
+Makefile.1379013107.26219: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr21-10.pairwise -d 120916 -c 21 -x 10 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013107.26219: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr21-10.pairwise -d 120916 -c 21 -x 10 -s 120916 -l 120916.int.bed
+Makefile.1379013108.20420: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr21-11.pairwise -d 120916 -c 21 -x 11 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013108.20420: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr21-11.pairwise -d 120916 -c 21 -x 11 -s 120916 -l 120916.int.bed
+Makefile.1379013111.11312: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr21-12.pairwise -d 120916 -c 21 -x 12 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013111.11312: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr21-12.pairwise -d 120916 -c 21 -x 12 -s 120916 -l 120916.int.bed
+Makefile.1379013113.30208: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr21-13.pairwise -d 120916 -c 21 -x 13 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013113.30208: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr21-13.pairwise -d 120916 -c 21 -x 13 -s 120916 -l 120916.int.bed
+Makefile.1379013115.21517: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr21-14.pairwise -d 120916 -c 21 -x 14 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013115.21517: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr21-14.pairwise -d 120916 -c 21 -x 14 -s 120916 -l 120916.int.bed
+Makefile.1379013117.16458: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr21-15.pairwise -d 120916 -c 21 -x 15 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013117.16458: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr21-15.pairwise -d 120916 -c 21 -x 15 -s 120916 -l 120916.int.bed
+Makefile.1379013119.486: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr21-16.pairwise -d 120916 -c 21 -x 16 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013119.486: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr21-16.pairwise -d 120916 -c 21 -x 16 -s 120916 -l 120916.int.bed
+Makefile.1379013121.28603: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr21-17.pairwise -d 120916 -c 21 -x 17 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013121.28603: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr21-17.pairwise -d 120916 -c 21 -x 17 -s 120916 -l 120916.int.bed
+Makefile.1379013124.2034: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr21-18.pairwise -d 120916 -c 21 -x 18 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013124.2034: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr21-18.pairwise -d 120916 -c 21 -x 18 -s 120916 -l 120916.int.bed
+Makefile.1379013126.7900: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr21-19.pairwise -d 120916 -c 21 -x 19 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013126.7900: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr21-19.pairwise -d 120916 -c 21 -x 19 -s 120916 -l 120916.int.bed
+Makefile.1379013128.9918: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr21-20.pairwise -d 120916 -c 21 -x 20 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013128.9918: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr21-20.pairwise -d 120916 -c 21 -x 20 -s 120916 -l 120916.int.bed
+Makefile.1379013130.4328: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr21-21.pairwise -d 120916 -c 21 -x 21 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013130.4328: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr21-21.pairwise -d 120916 -c 21 -x 21 -s 120916 -l 120916.int.bed
+Makefile.1379013132.13551: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr21-22.pairwise -d 120916 -c 21 -x 22 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013132.13551: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr21-22.pairwise -d 120916 -c 21 -x 22 -s 120916 -l 120916.int.bed
+Makefile.1379013134.18788: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr22-1.pairwise -d 120916 -c 22 -x 1 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013134.18788: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr22-1.pairwise -d 120916 -c 22 -x 1 -s 120916 -l 120916.int.bed
+Makefile.1379013137.15545: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr22-2.pairwise -d 120916 -c 22 -x 2 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013137.15545: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr22-2.pairwise -d 120916 -c 22 -x 2 -s 120916 -l 120916.int.bed
+Makefile.1379013139.14331: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr22-3.pairwise -d 120916 -c 22 -x 3 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013139.14331: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr22-3.pairwise -d 120916 -c 22 -x 3 -s 120916 -l 120916.int.bed
+Makefile.1379013142.9783: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr22-4.pairwise -d 120916 -c 22 -x 4 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013142.9783: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr22-4.pairwise -d 120916 -c 22 -x 4 -s 120916 -l 120916.int.bed
+Makefile.1379013144.9543: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr22-5.pairwise -d 120916 -c 22 -x 5 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013144.9543: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr22-5.pairwise -d 120916 -c 22 -x 5 -s 120916 -l 120916.int.bed
+Makefile.1379013146.4400: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr22-6.pairwise -d 120916 -c 22 -x 6 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013146.4400: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr22-6.pairwise -d 120916 -c 22 -x 6 -s 120916 -l 120916.int.bed
+Makefile.1379013148.2887: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr22-7.pairwise -d 120916 -c 22 -x 7 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013148.2887: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr22-7.pairwise -d 120916 -c 22 -x 7 -s 120916 -l 120916.int.bed
+Makefile.1379013151.7599: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr22-8.pairwise -d 120916 -c 22 -x 8 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013151.7599: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr22-8.pairwise -d 120916 -c 22 -x 8 -s 120916 -l 120916.int.bed
+Makefile.1379013153.9702: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr22-9.pairwise -d 120916 -c 22 -x 9 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013153.9702: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr22-9.pairwise -d 120916 -c 22 -x 9 -s 120916 -l 120916.int.bed
+Makefile.1379013156.32708: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr22-10.pairwise -d 120916 -c 22 -x 10 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013156.32708: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr22-10.pairwise -d 120916 -c 22 -x 10 -s 120916 -l 120916.int.bed
+Makefile.1379013158.19241: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr22-11.pairwise -d 120916 -c 22 -x 11 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013158.19241: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr22-11.pairwise -d 120916 -c 22 -x 11 -s 120916 -l 120916.int.bed
+Makefile.1379013160.13712: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr22-12.pairwise -d 120916 -c 22 -x 12 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013160.13712: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr22-12.pairwise -d 120916 -c 22 -x 12 -s 120916 -l 120916.int.bed
+Makefile.1379013162.4173: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr22-13.pairwise -d 120916 -c 22 -x 13 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013162.4173: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr22-13.pairwise -d 120916 -c 22 -x 13 -s 120916 -l 120916.int.bed
+Makefile.1379013164.6862: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr22-14.pairwise -d 120916 -c 22 -x 14 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013164.6862: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr22-14.pairwise -d 120916 -c 22 -x 14 -s 120916 -l 120916.int.bed
+Makefile.1379013166.23273: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr22-15.pairwise -d 120916 -c 22 -x 15 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013166.23273: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr22-15.pairwise -d 120916 -c 22 -x 15 -s 120916 -l 120916.int.bed
+Makefile.1379013168.23320: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr22-16.pairwise -d 120916 -c 22 -x 16 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013168.23320: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr22-16.pairwise -d 120916 -c 22 -x 16 -s 120916 -l 120916.int.bed
+Makefile.1379013170.28210: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr22-17.pairwise -d 120916 -c 22 -x 17 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013170.28210: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr22-17.pairwise -d 120916 -c 22 -x 17 -s 120916 -l 120916.int.bed
+Makefile.1379013172.1732: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr22-18.pairwise -d 120916 -c 22 -x 18 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013172.1732: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr22-18.pairwise -d 120916 -c 22 -x 18 -s 120916 -l 120916.int.bed
+Makefile.1379013175.20837: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr22-19.pairwise -d 120916 -c 22 -x 19 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013175.20837: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr22-19.pairwise -d 120916 -c 22 -x 19 -s 120916 -l 120916.int.bed
+Makefile.1379013177.4338: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr22-20.pairwise -d 120916 -c 22 -x 20 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013177.4338: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr22-20.pairwise -d 120916 -c 22 -x 20 -s 120916 -l 120916.int.bed
+Makefile.1379013179.17283: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr22-21.pairwise -d 120916 -c 22 -x 21 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013179.17283: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr22-21.pairwise -d 120916 -c 22 -x 21 -s 120916 -l 120916.int.bed
+Makefile.1379013181.12860: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr22-22.pairwise -d 120916 -c 22 -x 22 -s 120916 -l 120916.int.bed
+DEBUG Makefile.1379013181.12860: bash /data/DIV5/SASC/003_scr/scripts/circos/createcircos.sh -b 120916.cov.bed -o 120916.chr22-22.pairwise -d 120916 -c 22 -x 22 -s 120916 -l 120916.int.bed

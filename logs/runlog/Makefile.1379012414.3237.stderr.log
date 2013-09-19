@@ -1,0 +1,4 @@
+Can't locate Config/General.pm in @INC (@INC contains: /usr/local/circos/circos-0.62-1/bin/lib /usr/local/circos/circos-0.62-1/bin/../lib /usr/local/circos/circos-0.62-1/bin /etc/perl /usr/local/lib/perl/5.14.2 /usr/local/share/perl/5.14.2 /usr/lib/perl5 /usr/share/perl5 /usr/lib/perl/5.14 /usr/share/perl/5.14 /usr/local/lib/site_perl .) at /usr/local/circos/circos-0.62-1/bin/../lib/Circos.pm line 54.
+BEGIN failed--compilation aborted at /usr/local/circos/circos-0.62-1/bin/../lib/Circos.pm line 54.
+Compilation failed in require at /usr/local/circos/current/bin/circos line 184.
+BEGIN failed--compilation aborted at /usr/local/circos/current/bin/circos line 184.
