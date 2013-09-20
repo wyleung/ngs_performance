@@ -48,8 +48,8 @@ class TimeStatParser(object):
         }
 
     def clean_sh( self, l ):
-        if l.startswith('sh -c '):
-            return l[6:]
+        if 'sh -c ' in l:
+            return l.replace('sh -c ', '')
         return l
 
     def startswithDEBUG( self, x):
@@ -119,7 +119,7 @@ class TimeStatParser(object):
         self.loglist = parsed_loglines
         return parsed_loglines
 
-    def parseAllLogs( self, loglist=None, verbose=True ):
+    def parseAllLogs( self, loglist=None ):
         """
             Parse all logentries in loglist into dictionaries
         """
@@ -128,17 +128,19 @@ class TimeStatParser(object):
             loglist = self.loglist
         
         self.data = collections.OrderedDict()
-        if verbose:
+        if self.verbosity:
             #init some stats variable
             utime_sum = 0.0
         for i, item in enumerate(loglist):
             k,v=item
             logdict = self.parseIndividualLog( fname=k )
+            if logdict.get('cmd', '') == '':
+                logdict['cmd'] = v
             self.data[ k ] = logdict
-            if verbose:
+            if self.verbosity:
                 utime_sum += float( logdict.get('utime',0.00) )
                 print "%4s %8s -%25s- %s" % (i,logdict.get('utime','0.00'),k,v)
-        if verbose:
+        if self.verbosity:
             print "{0} seconds taken total for this pipeline run\nRoughly equal to {1} hours (+fractions)".format( utime_sum, round( utime_sum/3600.0, 2) )
         return self.data
 
@@ -150,7 +152,7 @@ class TimeStatParser(object):
         print "{0}\t{1}\t{2}".format("Log", "", "\t".join(keys))
         
         for k,log in self.data.items():
-            log_info = map( lambda x: self.data[k].get(x, '-'), keys)
+            log_info = map( lambda x: self.clean_sh(self.data[k].get(x, '-')), keys)
             print "{0}\t{1}\t{2}".format(k, "", "\t".join(log_info))
 
     def storePickleLogs( self, fname_output=None ):
