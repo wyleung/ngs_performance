@@ -22,29 +22,35 @@ class TimeStatParser(object):
         self.data = None
         self.loglist = None
         self.statkeys = {
-            "Command being timed": "cmd",
-            "User time (seconds)": "utime",
-            "System time (seconds)": "stime",
-            "Percent of CPU this job got": "rcpu",
+            "Command being timed":                  "cmd",
+            "User time (seconds)":                  "utime",
+            "System time (seconds)":                "stime",
+            "Percent of CPU this job got":          "rcpu",
             "Elapsed (wall clock) time (h:mm:ss or m:ss)": "wall",
-            "Average shared text size (kbytes)": "shmem",
-            "Average unshared data size (kbytes)": "unsharedmem",
-            "Average stack size (kbytes)": "avg_stacksize",
-            "Average total size (kbytes)": "avg_totalsize",
-            "Maximum resident set size (kbytes)": "max_mem",
-            "Average resident set size (kbytes)": "avg_mem",
-            "File system inputs": "fs_input", # in kb
-            "File system outputs": "fs_output", # in kb
-            "Socket messages sent": "socket_messages_tx",
-            "Socket messages received": "socket_messages_rx",
-            "Swaps": "context_swaps",
-            "Voluntary context switches": "vol_context_switches",
-            "Involuntary context switches": "forced_context_switches",
-            "Page size (bytes)": "pagesize",
+            
+            "Average shared text size (kbytes)":    "shmem",
+            "Average unshared data size (kbytes)":  "unsharedmem",
+            "Average stack size (kbytes)":          "avg_stacksize",
+            "Average total size (kbytes)":          "avg_totalsize",
+            "Maximum resident set size (kbytes)":   "max_mem",
+            "Average resident set size (kbytes)":   "avg_mem",
+
+            "File system inputs":                   "fs_input", # in kb
+            "File system outputs":                  "fs_output", # in kb
+
+            "Socket messages sent":                 "socket_messages_tx",
+            "Socket messages received":             "socket_messages_rx",
+            "Swaps":                                "context_swaps",
+
+            "Voluntary context switches":           "vol_context_switches",
+            "Involuntary context switches":         "forced_context_switches",
+
+            "Page size (bytes)":                    "pagesize",
             "Minor (reclaiming a frame) page faults": "page_faults_minor",
-            "Major (requiring I/O) page faults": "page_faults_majors",
-            "Exit status": "exitcode",
-            "Signals delivered": "signals_rx",
+            "Major (requiring I/O) page faults":    "page_faults_majors",
+
+            "Exit status":                          "exitcode",
+            "Signals delivered":                    "signals_rx",
         }
 
     def clean_sh( self, l ):
